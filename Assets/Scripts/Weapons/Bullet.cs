@@ -24,8 +24,10 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        collision.transform.GetComponent<IHaveHealth>().GetDamage(damage);
-        Destroy(gameObject);
+        if (!collision.transform.CompareTag("Player"))
+        {
+            collision.transform.GetComponent<IHaveHealth>().GetDamage(damage);
+            Destroy(gameObject);
+        }
     }
-
 }

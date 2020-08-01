@@ -5,8 +5,8 @@ using UnityEngine;
 
 public interface IHaveHealth
 {
-    int MaxHealth { get; set; }
-    int CurrentHealth { get; set; }
+    float MaxHealth { get; set; }
+    float CurrentHealth { get; set; }
     void GetDamage(float dmg);
     void Heal(float amount);
     void Die();
