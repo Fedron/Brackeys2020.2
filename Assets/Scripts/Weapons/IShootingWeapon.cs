@@ -2,5 +2,5 @@
 
 public interface IShootingWeapon
 {
-     void FireWeapon(GameObject bulletPref);
+     void FireWeapon(GameObject bulletPref, float damage);
 }

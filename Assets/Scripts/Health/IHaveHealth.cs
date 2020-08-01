@@ -7,8 +7,8 @@ public interface IHaveHealth
 {
     int MaxHealth { get; set; }
     int CurrentHealth { get; set; }
-    void GetDamage();
-    void Heal();
+    void GetDamage(float dmg);
+    void Heal(float amount);
     void Die();
     
 }

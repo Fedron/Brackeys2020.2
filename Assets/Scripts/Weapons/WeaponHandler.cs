@@ -26,7 +26,7 @@ public class WeaponHandler : MonoBehaviour
         {
             // Resets the timer for cooldown
             nextFireTime = Time.time + fireRefreshRate;
-            weaponShootingBehavior.FireWeapon(bulletPref);
+            weaponShootingBehavior.FireWeapon(bulletPref, damage);
         }
     }
 
