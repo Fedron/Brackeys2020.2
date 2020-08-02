@@ -9,7 +9,9 @@ public class Bullet : MonoBehaviour
     [SerializeField]
     private float bulletSpeed = 15f;
     private Rigidbody2D rb2d;
-    public float damage;
+    private float _damage;
+
+    public float Damage { get => _damage; set => _damage = value; }
 
     private void Awake()
     {
@@ -26,7 +28,7 @@ public class Bullet : MonoBehaviour
     {
         if (!collision.transform.CompareTag("Player"))
         {
-            collision.transform.GetComponent<IHaveHealth>().GetDamage(damage);
+            collision.transform.GetComponent<IHaveHealth>().GetDamage(Damage);
             Destroy(gameObject);
         }
     }
