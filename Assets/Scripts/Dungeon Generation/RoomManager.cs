@@ -2,6 +2,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RoomManager : MonoBehaviour {
+    [SerializeField] GameObject walls = default;
+    [SerializeField] Transform minimapHolder = default;
+
     DungeonManager dungeon;
     int enemiesToSpawn;
 
@@ -10,11 +13,15 @@ public class RoomManager : MonoBehaviour {
     }
     List<GameObject> enemies = new List<GameObject>();
     [HideInInspector] public int roomID;
+    [HideInInspector] public bool explored;
 
     private void Awake() {
         dungeon = GameObject.FindGameObjectWithTag("DungeonManager").GetComponent<DungeonManager>();
         dungeon.rooms.Add(gameObject);
+
         roomID = dungeon.rooms.IndexOf(gameObject);
+        if (roomID == 0) ShowOnMinimap();
+
         dungeon.generateRoomContent += SpawnContent;
     }
 
@@ -63,5 +70,24 @@ public class RoomManager : MonoBehaviour {
             enemies.Add(enemy);
         }
         dungeon.generateRoomContent -= SpawnContent;
+    }
+
+    public void ShowOnMinimap() {
+        if (explored) return;
+        explored = true;
+        for (int i = 0; i < walls.transform.childCount; i++) {
+            GameObject original = walls.transform.GetChild(i).gameObject;
+            GameObject minimapWall = Instantiate(
+                original,
+                original.transform.position,
+                original.transform.rotation,
+                minimapHolder
+            );
+            minimapWall.layer = LayerMask.NameToLayer("Minimap");
+            minimapWall.name = "Minimap Wall";
+        }
+        
+        if (transform.GetChild(transform.childCount - 1).name.Contains("Chest"))
+            Instantiate(dungeon.chestRoomMinimapIcon, transform.position, Quaternion.identity, minimapHolder);
     }
 }

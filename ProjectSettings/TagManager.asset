@@ -39,8 +39,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Minimap
   - Wall
   m_SortingLayers:
   - name: Background
