@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour, IHaveHealth
+public class CreaturesHealth : MonoBehaviour, IHaveHealth
 {
     public event Action OnDie = delegate { };
     [SerializeField]

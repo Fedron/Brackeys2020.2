@@ -15,7 +15,9 @@ public class PlayerInputHandler : MonoBehaviour
         var vertical = Input.GetAxisRaw("Vertical");
         var horizontal = Input.GetAxisRaw("Horizontal");
         playerMover.SetDirection(new Vector2(horizontal, vertical));
-        playerMover.SetMouseDirection(Camera.main.ScreenToWorldPoint(Input.mousePosition));
+        //BroadcastingMessage in order for mouse movements to be seen by any weapon
+        BroadcastMessage("SetMouseDirection", Camera.main.ScreenToWorldPoint(Input.mousePosition));
+        // BroadcastingMessage in order for any weapon to know that the shot was fired
         if (Input.GetButtonDown("Fire1")) { BroadcastMessage("Fire"); }
     }
 }

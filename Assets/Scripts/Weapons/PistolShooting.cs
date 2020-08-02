@@ -9,6 +9,6 @@ public class PistolShooting : MonoBehaviour, IShootingWeapon
     public void FireWeapon(GameObject bulletPref, float dmg)
     {
         var bullet = Instantiate(bulletPref, shootingFromTransform.position, shootingFromTransform.rotation);
-        bullet.GetComponent<Bullet>().damage = dmg;
+        bullet.GetComponent<Bullet>().Damage = dmg;
     }
 }
