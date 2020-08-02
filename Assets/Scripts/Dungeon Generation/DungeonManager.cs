@@ -21,14 +21,29 @@ public class DungeonManager : MonoBehaviour {
     public GameObject closedRoom;
 
     [HideInInspector] public List<GameObject> rooms = new List<GameObject>();
+    [HideInInspector] public int activeRoom;
 
-    bool roomContentGenerated;
+    bool roomContentGenerated = false;
     public delegate void GenerateRoomContent();
     public GenerateRoomContent generateRoomContent;
 
+    public delegate void OpenDoors();
+    public OpenDoors openDoors;
+    public delegate void CloseDoors();
+    public CloseDoors closeDoors;
+
+    private void Awake() {
+        activeRoom = 0;
+    }
+
     private void LateUpdate() {
         if (roomContentGenerated) return;
+
         RoomSpawner[] spawners = GameObject.FindObjectsOfType<RoomSpawner>();
-        if (spawners.Length == 0) generateRoomContent?.Invoke();
+        if (spawners.Length == 0) {
+            generateRoomContent?.Invoke();
+            roomContentGenerated = true;
+            openDoors?.Invoke();
+        }
     }
 }

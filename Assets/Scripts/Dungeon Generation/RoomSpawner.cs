@@ -9,14 +9,14 @@ public class RoomSpawner : MonoBehaviour {
         Bottom,
         Left
     }
-    [SerializeField] CorridorDirection corridorDirection;
+    [SerializeField] CorridorDirection corridorDirection = CorridorDirection.Top;
 
     DungeonManager dungeon;
     [HideInInspector] public bool spawned = false;
 
     private void Awake() {
         Destroy(gameObject, 1f);
-        dungeon = GameObject.FindGameObjectWithTag("Rooms").GetComponent<DungeonManager>();
+        dungeon = GameObject.FindGameObjectWithTag("DungeonManager").GetComponent<DungeonManager>();
         Invoke("Spawn", 0.05f);
     }
 

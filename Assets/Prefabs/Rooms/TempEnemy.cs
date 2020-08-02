@@ -1,0 +1,12 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class TempEnemy : MonoBehaviour {
+    private void OnCollisionEnter2D(Collision2D other) {
+        if (other.gameObject.TryGetComponent<Bullet>(out Bullet bullet)) {
+            Destroy(gameObject);
+            Destroy(other.gameObject);
+        }
+    }
+}

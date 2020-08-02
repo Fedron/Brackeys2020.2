@@ -4,12 +4,31 @@ using UnityEngine;
 public class RoomManager : MonoBehaviour {
     DungeonManager dungeon;
     int enemiesToSpawn;
+
+    public int EnemyCount {
+        get { return enemies.Count; }
+    }
     List<GameObject> enemies = new List<GameObject>();
+    [HideInInspector] public int roomID;
 
     private void Awake() {
-        dungeon = GameObject.FindGameObjectWithTag("Rooms").GetComponent<DungeonManager>();
+        dungeon = GameObject.FindGameObjectWithTag("DungeonManager").GetComponent<DungeonManager>();
         dungeon.rooms.Add(gameObject);
+        roomID = dungeon.rooms.IndexOf(gameObject);
         dungeon.generateRoomContent += SpawnContent;
+    }
+
+    private void LateUpdate() {
+        if (dungeon.activeRoom != roomID) return;
+
+        if (EnemyCount > 0) {
+            List<GameObject> oldEnemies = enemies;
+            for (int i = 0; i < oldEnemies.Count; i++) {
+                if (enemies[i] == null) enemies.Remove(oldEnemies[i]);
+            }
+        } else {
+            dungeon.openDoors?.Invoke();
+        }
     }
 
     private void SpawnContent() {
