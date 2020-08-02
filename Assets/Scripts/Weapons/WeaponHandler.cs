@@ -10,6 +10,7 @@ public class WeaponHandler : MonoBehaviour
     private float fireRefreshRate, damage;
     private GameObject bulletPref;
     private float nextFireTime = 0f;
+    public int NumOfRicochets;
 
     private void Awake()
     {
@@ -26,7 +27,7 @@ public class WeaponHandler : MonoBehaviour
         {
             // Resets the timer for cooldown
             nextFireTime = Time.time + fireRefreshRate;
-            weaponShootingBehavior.FireWeapon(bulletPref, damage);
+            weaponShootingBehavior.FireWeapon(bulletPref, damage, NumOfRicochets);
         }
     }
 

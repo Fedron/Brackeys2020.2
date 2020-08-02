@@ -8,10 +8,11 @@ public class Bullet : MonoBehaviour
     private float existanceTime = 1f;
     [SerializeField]
     private float bulletSpeed = 15f;
+    [SerializeField]
+    private string targetTag;
     private Rigidbody2D rb2d;
-    private float _damage;
-
-    public float Damage { get => _damage; set => _damage = value; }
+    public float Damage { get; set; }
+    public int maxNumofRicochets, currentNumOfRicochets = 0;
 
     private void Awake()
     {
@@ -26,10 +27,18 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (!collision.transform.CompareTag("Player"))
+        // If it touches the player
+        if (collision.transform.CompareTag(targetTag))
         {
-            collision.transform.GetComponent<IHaveHealth>().GetDamage(Damage);
             Destroy(gameObject);
+            var health = collision.transform.GetComponent<IHaveHealth>();
+            if (health != null)
+                health.GetDamage(Damage);
+        }
+        else if (collision.transform.CompareTag("Wall"))
+        {
+            if (currentNumOfRicochets < maxNumofRicochets) currentNumOfRicochets++;
+            else Destroy(gameObject);
         }
     }
 }

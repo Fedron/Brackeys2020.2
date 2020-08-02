@@ -5,6 +5,7 @@ using UnityEngine;
 
 public interface IHaveHealth
 {
+    event Action OnDie;
     float MaxHealth { get; set; }
     float CurrentHealth { get; set; }
     void GetDamage(float dmg);

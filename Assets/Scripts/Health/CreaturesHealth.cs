@@ -24,14 +24,15 @@ public class CreaturesHealth : MonoBehaviour, IHaveHealth
         get { return _currentHealth; }
         set 
         {
-            if (value <= 0) Die();
-            else if (value > MaxHealth)  _currentHealth = MaxHealth; 
+            if (value <= 0) { Die(); _currentHealth = 0; }
+            else if (value > MaxHealth) _currentHealth = MaxHealth;
             else _currentHealth = value; 
         }
     }
     public void GetDamage(float dmg)
     {
         CurrentHealth -= dmg;
+
     }
     public void Heal(float amount)
     {

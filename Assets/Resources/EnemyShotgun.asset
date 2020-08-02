@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9536f8fa2bcda34db86af0786a5e726, type: 3}
-  m_Name: Shotgun
+  m_Name: EnemyShotgun
   m_EditorClassIdentifier: 
   coolDownRate: 1
   damage: 20
-  bulletPrefab: {fileID: 4844937914257232506, guid: 80f983f5df57c7440b2e6bd49ff5a39c,
+  bulletPrefab: {fileID: 4844937914257232506, guid: 8ff44c8e219827e4f981f80030569823,
     type: 3}
