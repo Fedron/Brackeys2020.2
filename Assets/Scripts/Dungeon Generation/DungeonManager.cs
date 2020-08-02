@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DungeonManager : MonoBehaviour {
-    [Tooltip("Half-extends of a single room")]
+    [SerializeField] GameObject startRoomMinimapIcon = default;
+    [SerializeField] GameObject endRoomMinimapIcon = default;
+    public GameObject chestRoomMinimapIcon = default;
+
+    [Space, Tooltip("Half-extends of a single room")]
     public int roomSize = 10;
 
     [Header("Enemies")]
@@ -41,6 +45,9 @@ public class DungeonManager : MonoBehaviour {
 
         RoomSpawner[] spawners = GameObject.FindObjectsOfType<RoomSpawner>();
         if (spawners.Length == 0) {
+            Instantiate(startRoomMinimapIcon, rooms[0].transform.position, Quaternion.identity);
+            Instantiate(endRoomMinimapIcon, rooms[rooms.Count - 1].transform.position, Quaternion.identity);
+
             generateRoomContent?.Invoke();
             roomContentGenerated = true;
             openDoors?.Invoke();

@@ -16,6 +16,7 @@ TagManager:
   - UI
   - 
   - 
+  - Characters
   - 
   - 
   - 
@@ -37,8 +38,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Minimap
   - Wall
   m_SortingLayers:
   - name: Background

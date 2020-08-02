@@ -14,22 +14,26 @@ public class Door : MonoBehaviour {
         dungeon.closeDoors += Close;
     }
 
-    private void Open() {
+    public void Open() {
         animator.SetBool("open", true);
         animator.SetBool("closed", false);
     }
 
-    private void Close() {
+    public void Close() {
         animator.SetBool("open", false);
         animator.SetBool("closed", true);
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (dungeon.activeRoom != room.roomID && other.CompareTag("Player")) {
-            if (room.EnemyCount > 0) {
-                dungeon.activeRoom = room.roomID;
+            dungeon.activeRoom = room.roomID;
+            if (room.EnemyCount > 0 || !room.explored) {         
                 dungeon.closeDoors?.Invoke();
+                room.ShowOnMinimap();
+            } else {
+                dungeon.openDoors?.Invoke();
             }
+
             FindObjectOfType<CameraMovement>().MoveCamera(new Vector3(
                 room.transform.position.x,
                 room.transform.position.y,
