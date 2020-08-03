@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DungeonManager : MonoBehaviour {
+    [SerializeField] bool debug = false;
     [SerializeField] DungeonPreset[] dungeonPresets = default;
-    int currentDungeonPreset = -1;
 
     [Header("Minimap Icons")]
     [SerializeField] GameObject startRoomMinimapIcon = default;
@@ -16,7 +16,7 @@ public class DungeonManager : MonoBehaviour {
     [HideInInspector] public List<GameObject> rooms = new List<GameObject>();
     [HideInInspector] public int activeRoom;
 
-    bool roomContentGenerated = false;
+    [HideInInspector] public bool roomContentGenerated = false;
     public delegate void GenerateRoomContent();
     public GenerateRoomContent generateRoomContent;
 
@@ -41,11 +41,6 @@ public class DungeonManager : MonoBehaviour {
 
     private void Awake() {
         activeRoom = 0;
-        GenerateDungeon();        
-    }
-
-    private void Update() {
-        if (Input.GetKeyDown(KeyCode.Space)) GenerateDungeon();
     }
 
     private void LateUpdate() {
@@ -53,51 +48,56 @@ public class DungeonManager : MonoBehaviour {
 
         RoomSpawner[] spawners = GameObject.FindObjectsOfType<RoomSpawner>();
         if (spawners.Length == 0) {
+            if (debug) Debug.Log("Layout complete, spawning minimap icons");
             Instantiate(startRoomMinimapIcon, rooms[0].transform.position, Quaternion.identity, transform);
             Instantiate(endRoomMinimapIcon, rooms[rooms.Count - 1].transform.position, Quaternion.identity, transform);
             Instantiate(nextFloorPrefab, rooms[rooms.Count - 1].transform.position, Quaternion.identity, transform);
 
+            if (debug) Debug.Log("------ Generating room content ------");
             generateRoomContent?.Invoke();
             roomContentGenerated = true;
+            if (debug) Debug.Log("------ Generation complete, opening doors ------");
             openDoors?.Invoke();
         }
     }
 
-    public void GenerateDungeon() {
+    public void GenerateDungeon(int preset) {
         // Prevent regeneration if current dungeon is still generating
         RoomSpawner[] spawners = GameObject.FindObjectsOfType<RoomSpawner>();
         if (spawners.Length > 0) return;
 
-        // Destroy old dungeon if there was one
-        if (rooms.Count > 0) {
-            foreach (GameObject room in rooms) {
-                Destroy(room);
-            }
-            for (int i = 0; i < transform.childCount; i++) {
-                Destroy(transform.GetChild(i).gameObject);
-            }
+        if (debug) Debug.Log("------ Destroying old dungeon ------");
+        foreach (GameObject room in rooms) {
+            Destroy(room);
+        }
+        for (int i = 0; i < transform.childCount; i++) {
+            Destroy(transform.GetChild(i).gameObject);
         }
 
         // Reset values
+        if (debug) Debug.Log("Reseting values");
         rooms = new List<GameObject>();
         roomContentGenerated = false;
         activeRoom = 0;
         FindObjectOfType<PlayerInputHandler>().transform.position = Vector3.zero;
 
-        currentDungeonPreset++;
-        roomSize = dungeonPresets[currentDungeonPreset].roomSize;
-        minEnemies = dungeonPresets[currentDungeonPreset].minEnemies;
-        maxEnemies = dungeonPresets[currentDungeonPreset].maxEnemies;
-        enemies = dungeonPresets[currentDungeonPreset].enemies;
-        topRooms = dungeonPresets[currentDungeonPreset].topRooms;
-        rightRooms = dungeonPresets[currentDungeonPreset].rightRooms;
-        bottomRooms = dungeonPresets[currentDungeonPreset].bottomRooms;
-        leftRooms = dungeonPresets[currentDungeonPreset].leftRooms;
-        roomInners = dungeonPresets[currentDungeonPreset].roomInners;
-        startRoom = dungeonPresets[currentDungeonPreset].startRoom;
-        closedRoom = dungeonPresets[currentDungeonPreset].closedRoom;
+        preset = Mathf.Clamp(preset, 0, dungeonPresets.Length);
+        if (debug) Debug.Log(string.Concat("Setting preset values using preset ", preset));
+        roomSize = dungeonPresets[preset].roomSize;
+        minEnemies = dungeonPresets[preset].minEnemies;
+        maxEnemies = dungeonPresets[preset].maxEnemies;
+        enemies = dungeonPresets[preset].enemies;
+        topRooms = dungeonPresets[preset].topRooms;
+        rightRooms = dungeonPresets[preset].rightRooms;
+        bottomRooms = dungeonPresets[preset].bottomRooms;
+        leftRooms = dungeonPresets[preset].leftRooms;
+        roomInners = dungeonPresets[preset].roomInners;
+        startRoom = dungeonPresets[preset].startRoom;
+        closedRoom = dungeonPresets[preset].closedRoom;
 
         // Create new start room and therefore dungeon
-        rooms.Add(Instantiate(startRoom, Vector3.zero, Quaternion.identity));
+        if (debug) Debug.Log("------ Starting Dungeon Generation ------");
+        if (debug) Debug.Log("Instantiating rooms and generating layout");
+        rooms.Add(Instantiate(startRoom, Vector3.zero, Quaternion.identity, transform));
     }
 }

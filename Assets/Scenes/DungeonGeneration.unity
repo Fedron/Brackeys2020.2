@@ -183,7 +183,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 1073741824
+    m_Bits: 536870912
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 1a5888fb7d18abc4a8c833e36b2c3aa7, type: 2}
   m_TargetDisplay: 1
@@ -205,6 +205,7 @@ GameObject:
   m_Component:
   - component: {fileID: 184806183}
   - component: {fileID: 184806182}
+  - component: {fileID: 184806184}
   m_Layer: 0
   m_Name: Dungeon Manager
   m_TagString: DungeonManager
@@ -288,6 +289,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &184806184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 184806181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74613be216e41cb48a8391340a5d5b7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  difficultyCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  maxDifficultyMultiplier: 3
+  floorMaxDifficulty: 10
+  schrodingerFloorStart: 6
 --- !u!1 &582809355
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,7 +432,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponStats: {fileID: 11400000, guid: 3ede8e6f2e4d0d44fb965bc6d6d3ab2e, type: 2}
   fireRefreshRate: 0
-  damage: 100000000
+  damage: 1000
+  NumOfRicochets: 0
 --- !u!212 &700851628
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -906,7 +947,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a2f49f8d325f143bd856d92be4add5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movespeed: 15
+  movespeed: 10
 --- !u!58 &1787485537
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1067,7 +1108,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 2147483959
+    m_Bits: 1073742647
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0

@@ -12,8 +12,8 @@ public class PlayerInputHandler : MonoBehaviour
     }
     private void Update()
     {
-        var vertical = Input.GetAxisRaw("Vertical");
-        var horizontal = Input.GetAxisRaw("Horizontal");
+        var vertical = Input.GetAxis("Vertical");
+        var horizontal = Input.GetAxis("Horizontal");
         playerMover.SetDirection(new Vector2(horizontal, vertical));
         //BroadcastingMessage in order for mouse movements to be seen by any weapon
         BroadcastMessage("SetMouseDirection", Camera.main.ScreenToWorldPoint(Input.mousePosition));

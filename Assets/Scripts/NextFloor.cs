@@ -7,7 +7,7 @@ public class NextFloor : MonoBehaviour {
 
     private void Update() {
         if (interactableText.activeInHierarchy && Input.GetKeyDown(KeyCode.E)) {
-            FindObjectOfType<DungeonManager>().GenerateDungeon();
+            GameController.Instance.GoToNextFloor();
         }
     }
 

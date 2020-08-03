@@ -9,7 +9,7 @@ public class Bullet : MonoBehaviour
     [SerializeField]
     private float bulletSpeed = 15f;
     [SerializeField]
-    private string targetTag;
+    private string targetTag = default;
     private Rigidbody2D rb2d;
     public float Damage { get; set; }
     public int maxNumofRicochets, currentNumOfRicochets = 0;

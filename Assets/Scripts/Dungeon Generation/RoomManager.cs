@@ -33,7 +33,7 @@ public class RoomManager : MonoBehaviour {
                 if (enemies[i] == null) enemies.Remove(oldEnemies[i]);
             }
         } else {
-            dungeon.openDoors?.Invoke();
+            if (dungeon.roomContentGenerated) dungeon.openDoors?.Invoke();
         }
     }
 

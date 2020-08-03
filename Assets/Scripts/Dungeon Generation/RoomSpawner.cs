@@ -59,7 +59,7 @@ public class RoomSpawner : MonoBehaviour {
         if (other.CompareTag("RoomSP")) {
             try {
                 if (!other.GetComponent<RoomSpawner>().spawned && !spawned && transform.position != Vector3.zero) {
-                    Instantiate(dungeon.closedRoom, transform.position, Quaternion.identity);
+                    Instantiate(dungeon.closedRoom, transform.position, Quaternion.identity, FindObjectOfType<DungeonManager>().transform);
                     Destroy(gameObject);
                 }
             } catch {
