@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Schrodinger
   m_EditorClassIdentifier: 
   roomSize: 13
-  minEnemies: 5
-  maxEnemies: 10
+  minEnemies: 2
+  maxEnemies: 5
   enemies:
   - {fileID: 7445208607883925129, guid: 8d2674637650f324bac59b6cc0e7e945, type: 3}
+  - {fileID: 7445208607883925129, guid: 1d1c7921a7f192b48aff39b02f4ecf76, type: 3}
   topRooms:
   - {fileID: 8815349681416470350, guid: 7edd83c9efdabdd4da9a9edeb18053e1, type: 3}
   - {fileID: 579912162582221411, guid: 6be7cbf9e5ed8b4488853a03843a6409, type: 3}

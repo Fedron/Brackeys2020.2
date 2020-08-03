@@ -12,7 +12,7 @@ public class RoomSpawner : MonoBehaviour {
     [SerializeField] CorridorDirection corridorDirection = CorridorDirection.Top;
 
     DungeonManager dungeon;
-    [SerializeField] RoomManager manager = default;
+    bool spawned = false;
 
     private void Awake() {
         Destroy(gameObject, 1f);
@@ -21,7 +21,7 @@ public class RoomSpawner : MonoBehaviour {
     }
 
     private void Spawn() {
-        if (manager.spawned) return;
+        if (spawned) return;
 
         if (corridorDirection == CorridorDirection.Top) {
             Instantiate(
@@ -52,29 +52,18 @@ public class RoomSpawner : MonoBehaviour {
                 dungeon.transform
             );
         }
-        manager.spawned = true;
+        spawned = true;
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("RoomSP")) {       
-            // try {
-            //     if (!other.GetComponent<RoomSpawner>().spawned && !spawned && transform.position != Vector3.zero) {
-            //         Instantiate(dungeon.closedRoom, transform.position, Quaternion.identity, FindObjectOfType<DungeonManager>().transform);
-            //         Destroy(gameObject);
-            //     }
-            // } catch {
-            //     Destroy(gameObject);
-            // }
-
-            if (!other.GetComponent<RoomSpawner>().manager.spawned &&
-                !manager.spawned &&
+            if (!other.GetComponent<RoomSpawner>().spawned &&
+                !spawned &&
                 transform.position != Vector3.zero) { 
-                Instantiate(dungeon.closedRoom, transform.position, Quaternion.identity, FindObjectOfType<DungeonManager>().transform);
+                Instantiate(dungeon.closedRoom, transform.position, Quaternion.identity, dungeon.transform);
                 Destroy(gameObject);
             }
-            manager.spawned = true;
+            spawned = true;
         }
-
-        //if (other.CompareTag("Room")) Destroy(gameObject);
     }
 }
