@@ -17,6 +17,9 @@ public class Rewindable : MonoBehaviour {
 
     [HideInInspector] public bool rewinding = false;
 
+    public delegate void RewindComplete();
+    public RewindComplete rewindComplete;
+
     // Can moved to its own script, but it's only ever used inside this script atm
     private class FixedStack<T> : LinkedList<T> {
         private int _maxSize;
@@ -39,24 +42,16 @@ public class Rewindable : MonoBehaviour {
     }
 
     private void Awake() {
+        FindObjectOfType<RewinderManager>().normalRevive += Rewind;
+
         velocities = new FixedStack<Vector2>(Mathf.RoundToInt(secondsToSave / fidelity));
         rigidbody = GetComponent<Rigidbody2D>();
         InvokeRepeating("SaveVelocity", 0.00001f, fidelity);
 
-        // Temporary
+        // Temporary, used to debug, feel free to remove
         recordingTrail.emitting = true;
         playbackTrail.emitting = false;
-    }
-
-    // Temporary code, used for testing
-    private void Update() {
-        if (rewinding) return;
-        if (Input.GetKeyDown(KeyCode.Space)) Rewind();
-
-        rigidbody.velocity = new Vector2(
-            Input.GetAxis("Horizontal") * 10f,
-            Input.GetAxis("Vertical") * 10f
-        );
+        // End of temporary
     }
 
     private void SaveVelocity() {
@@ -64,9 +59,10 @@ public class Rewindable : MonoBehaviour {
     }
 
     public void Rewind() {
-        // Temporary
+        // Temporary, used to debug, feel free to remove
         recordingTrail.emitting = false;
         playbackTrail.emitting = true;
+        // End of temporary
 
         rewinding = true;
         CancelInvoke("SaveVelocity");
@@ -75,12 +71,13 @@ public class Rewindable : MonoBehaviour {
 
     private void PlaybackVelocities() {
         if (velocities.Count == 0) {
+            rewinding = false;
             CancelInvoke("PlaybackVelocities");
+            rewindComplete?.Invoke();
             rigidbody.velocity = Vector2.zero;
             return;
         }
         Vector2 velocity = velocities.Pop() * -1f;
-        Debug.Log(velocity);
         rigidbody.velocity = velocity;
     }
 }

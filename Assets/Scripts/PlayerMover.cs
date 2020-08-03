@@ -8,6 +8,8 @@ public class PlayerMover : MonoBehaviour
     public float movespeed = 6f;
     private Vector2 InputVector = Vector2.zero;
 
+    [SerializeField] Rewindable rewinder = default;
+
     private void Awake()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
@@ -23,6 +25,10 @@ public class PlayerMover : MonoBehaviour
         //Vector2 force = direction * movespeed * Time.deltaTime;
 
         //rigidbody2d.AddForce(force);
+        try {
+            if (rewinder.rewinding) return;
+        } catch {}
+        
         rigidbody2d.velocity = InputVector * movespeed;
     }
 }

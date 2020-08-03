@@ -1304,7 +1304,64 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   corridorDirection: 1
-  spawned: 0
+  manager: {fileID: 4874211633711511255}
+--- !u!1 &6052641264347740610
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 979811974240170104}
+  - component: {fileID: 3926559144123498712}
+  m_Layer: 0
+  m_Name: Room Trigger
+  m_TagString: Room
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &979811974240170104
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6052641264347740610}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1880109823813434800}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &3926559144123498712
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6052641264347740610}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 28, y: 28}
+  m_EdgeRadius: 0
 --- !u!1 &7203752876154262073
 GameObject:
   m_ObjectHideFlags: 0
@@ -1398,7 +1455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   corridorDirection: 0
-  spawned: 0
+  manager: {fileID: 4874211633711511255}
 --- !u!1 &8897040452666499330
 GameObject:
   m_ObjectHideFlags: 0
@@ -1433,6 +1490,7 @@ Transform:
   - {fileID: 9105283763057625518}
   - {fileID: 5726895526243564161}
   - {fileID: 1501586253979488209}
+  - {fileID: 979811974240170104}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1451,6 +1509,7 @@ MonoBehaviour:
   minimapWalls: {fileID: 4887425587770210719}
   roomID: 0
   explored: 0
+  spawned: 0
 --- !u!1001 &1107385542199416410
 PrefabInstance:
   m_ObjectHideFlags: 0

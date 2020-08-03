@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameController : MonoBehaviour {
     public static GameController Instance;
@@ -9,7 +10,8 @@ public class GameController : MonoBehaviour {
     [SerializeField] float maxDifficultyMultiplier = 3f;
     [SerializeField] int floorMaxDifficulty = 10;
 
-    [Space, SerializeField] int schrodingerFloorStart = 6;
+    [Header("UI, temporary")]
+    [SerializeField] TextMeshProUGUI floorText = default; // Eventually move to a UI Manager
 
     float difficultyMultiplier = 1f;
     public float Difficulty {
@@ -30,15 +32,22 @@ public class GameController : MonoBehaviour {
         Difficulty = 1f;
         dungeonManager = FindObjectOfType<DungeonManager>();
         GoToNextFloor();
+
+        FindObjectOfType<PlayerInputHandler>().gameObject.GetComponent<Rewindable>().rewindComplete += GoToNextDimension;
     }
 
-    public void GoToNextFloor() {
+    public void GoToNextDimension() {
+        GoToNextFloor(1);
+    }
+
+    public void GoToNextFloor(int preset = -1) {
         Floor++;
+        floorText.text = string.Concat("Floor: ", Floor.ToString());
 
         float perc = (float)floor / floorMaxDifficulty;
         float baseMultiplier = difficultyCurve.Evaluate(perc);
         difficultyMultiplier = (baseMultiplier * maxDifficultyMultiplier) + 1f;
 
-        dungeonManager.GenerateDungeon(floor >= schrodingerFloorStart ? 1 : 0);
+        dungeonManager.GenerateDungeon(preset);
     }
 }

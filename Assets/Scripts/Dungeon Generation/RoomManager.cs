@@ -4,7 +4,7 @@ using UnityEngine;
 public class RoomManager : MonoBehaviour {
     [SerializeField] GameObject minimapWalls = default;
 
-    DungeonManager dungeon;
+    [SerializeField] public DungeonManager dungeon;
     int enemiesToSpawn;
 
     public int EnemyCount {
@@ -13,6 +13,7 @@ public class RoomManager : MonoBehaviour {
     List<GameObject> enemies = new List<GameObject>();
     [HideInInspector] public int roomID;
     [HideInInspector] public bool explored;
+    [HideInInspector] public bool spawned;
 
     private void Awake() {
         dungeon = GameObject.FindGameObjectWithTag("DungeonManager").GetComponent<DungeonManager>();
@@ -21,23 +22,23 @@ public class RoomManager : MonoBehaviour {
         roomID = dungeon.rooms.IndexOf(gameObject);
         if (roomID == 0) ShowOnMinimap();
 
-        dungeon.generateRoomContent += SpawnContent;
+        //dungeon.generateRoomContent += SpawnContent;
     }
 
     private void LateUpdate() {
         if (dungeon.activeRoom != roomID) return;
 
-        if (EnemyCount > 0) {
-            List<GameObject> oldEnemies = enemies;
-            for (int i = 0; i < oldEnemies.Count; i++) {
-                if (enemies[i] == null) enemies.Remove(oldEnemies[i]);
-            }
-        } else {
-            if (dungeon.roomContentGenerated) dungeon.openDoors?.Invoke();
-        }
+        // if (EnemyCount > 0) {
+        //     List<GameObject> oldEnemies = enemies;
+        //     for (int i = 0; i < oldEnemies.Count; i++) {
+        //         if (enemies[i] == null) enemies.Remove(oldEnemies[i]);
+        //     }
+        // } else {
+        //     if (dungeon.roomContentGenerated) dungeon.openDoors?.Invoke();
+        // }
     }
 
-    private void SpawnContent() {
+    public void SpawnContent() {
         // Prevent start and end rooms from generating content
         if (roomID == 0 || roomID == dungeon.rooms.Count - 1) return;
         enemiesToSpawn = Random.Range(dungeon.minEnemies, dungeon.maxEnemies + 1);
@@ -51,23 +52,23 @@ public class RoomManager : MonoBehaviour {
         );
 
         // Spawn Enemies
-        for (int i = 0; i < enemiesToSpawn; i++) {
-            Vector3 spawnPos;
-            do {
-                spawnPos = new Vector3(
-                    transform.position.x + Random.Range(-dungeon.roomSize + 1, dungeon.roomSize - 1),
-                    transform.position.y + Random.Range(-dungeon.roomSize + 1, dungeon.roomSize - 1),
-                    0f
-                );
-            } while (Physics2D.OverlapCircle(spawnPos, 1f) != null);
+        // for (int i = 0; i < enemiesToSpawn; i++) {
+        //     Vector3 spawnPos;
+        //     do {
+        //         spawnPos = new Vector3(
+        //             transform.position.x + Random.Range(-dungeon.roomSize + 1, dungeon.roomSize - 1),
+        //             transform.position.y + Random.Range(-dungeon.roomSize + 1, dungeon.roomSize - 1),
+        //             0f
+        //         );
+        //     } while (Physics2D.OverlapCircle(spawnPos, 1f) != null);
 
-            GameObject enemy = Instantiate(
-                dungeon.enemies[Random.Range(0, dungeon.enemies.Length)],
-                spawnPos, Quaternion.identity
-            );
-            enemies.Add(enemy);
-        }
-        dungeon.generateRoomContent -= SpawnContent;
+        //     GameObject enemy = Instantiate(
+        //         dungeon.enemies[Random.Range(0, dungeon.enemies.Length)],
+        //         spawnPos, Quaternion.identity
+        //     );
+        //     enemies.Add(enemy);
+        // }
+        //dungeon.generateRoomContent -= SpawnContent;
     }
 
     public void ShowOnMinimap() {
@@ -80,7 +81,7 @@ public class RoomManager : MonoBehaviour {
     }
 
     private void OnDestroy() {
-        dungeon.generateRoomContent -= SpawnContent;
+        //dungeon.generateRoomContent -= SpawnContent;
         foreach (GameObject enemy in enemies) {
             Destroy(enemy);
         }
