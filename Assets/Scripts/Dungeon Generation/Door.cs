@@ -14,6 +14,11 @@ public class Door : MonoBehaviour {
         dungeon.closeDoors += Close;
     }
 
+    private void OnDisable() {
+        dungeon.openDoors -= Open;
+        dungeon.closeDoors -= Close;
+    }
+
     public void Open() {
         animator.SetBool("open", true);
         animator.SetBool("closed", false);
@@ -33,12 +38,6 @@ public class Door : MonoBehaviour {
             } else {
                 dungeon.openDoors?.Invoke();
             }
-
-            FindObjectOfType<CameraMovement>().MoveCamera(new Vector3(
-                room.transform.position.x,
-                room.transform.position.y,
-                0f
-            ));
         }
     }
 }

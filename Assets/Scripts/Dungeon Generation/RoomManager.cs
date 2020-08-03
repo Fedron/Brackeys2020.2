@@ -2,8 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RoomManager : MonoBehaviour {
-    [SerializeField] GameObject walls = default;
-    [SerializeField] Transform minimapHolder = default;
+    [SerializeField] GameObject minimapWalls = default;
 
     DungeonManager dungeon;
     int enemiesToSpawn;
@@ -17,7 +16,7 @@ public class RoomManager : MonoBehaviour {
 
     private void Awake() {
         dungeon = GameObject.FindGameObjectWithTag("DungeonManager").GetComponent<DungeonManager>();
-        dungeon.rooms.Add(gameObject);
+        if (!dungeon.rooms.Contains(gameObject)) dungeon.rooms.Add(gameObject);
 
         roomID = dungeon.rooms.IndexOf(gameObject);
         if (roomID == 0) ShowOnMinimap();
@@ -40,8 +39,7 @@ public class RoomManager : MonoBehaviour {
 
     private void SpawnContent() {
         // Prevent start and end rooms from generating content
-        int roomIndex = dungeon.rooms.IndexOf(gameObject);
-        if (roomIndex == 0 || roomIndex == dungeon.rooms.Count - 1) return;
+        if (roomID == 0 || roomID == dungeon.rooms.Count - 1) return;
         enemiesToSpawn = Random.Range(dungeon.minEnemies, dungeon.maxEnemies + 1);
 
         // Spawn Inners
@@ -75,19 +73,16 @@ public class RoomManager : MonoBehaviour {
     public void ShowOnMinimap() {
         if (explored) return;
         explored = true;
-        for (int i = 0; i < walls.transform.childCount; i++) {
-            GameObject original = walls.transform.GetChild(i).gameObject;
-            GameObject minimapWall = Instantiate(
-                original,
-                original.transform.position,
-                original.transform.rotation,
-                minimapHolder
-            );
-            minimapWall.layer = LayerMask.NameToLayer("Minimap");
-            minimapWall.name = "Minimap Wall";
-        }
+        minimapWalls.SetActive(true);
         
         if (transform.GetChild(transform.childCount - 1).name.Contains("Chest"))
-            Instantiate(dungeon.chestRoomMinimapIcon, transform.position, Quaternion.identity, minimapHolder);
+            Instantiate(dungeon.chestRoomMinimapIcon, transform.position, Quaternion.identity, transform);
+    }
+
+    private void OnDestroy() {
+        dungeon.generateRoomContent -= SpawnContent;
+        foreach (GameObject enemy in enemies) {
+            Destroy(enemy);
+        }
     }
 }
