@@ -14,10 +14,10 @@ public class PlayerInputHandler : MonoBehaviour
     }
     private void Update()
     {
-        if (rewinder.rewinding) return;
+        if (rewinder != null && rewinder.rewinding) return;
 
         // Used for testing, can be removed when player can die from enemy bullets
-        if (Input.GetKeyDown(KeyCode.F)) GetComponent<CreaturesHealth>().Die();
+        if (Input.GetKeyDown(KeyCode.F)) SendMessage("Die");
 
         var vertical = Input.GetAxis("Vertical");
         var horizontal = Input.GetAxis("Horizontal");

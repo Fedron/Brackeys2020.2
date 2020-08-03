@@ -31,6 +31,9 @@ public class WeaponHandler : MonoBehaviour
         }
     }
 
+    // todo can make it drop a weapon instead of destroying it
+    public void RemoveWeapon() => Destroy(gameObject);
+
     // Adds a cooldown
     private bool CanFire()
     {
