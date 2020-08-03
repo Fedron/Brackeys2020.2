@@ -31,9 +31,9 @@ public class GameController : MonoBehaviour {
         Instance = this;
         Difficulty = 1f;
         dungeonManager = FindObjectOfType<DungeonManager>();
-        GoToNextFloor();
+        GoToNextFloor(0);
 
-        FindObjectOfType<PlayerInputHandler>().gameObject.GetComponent<Rewindable>().rewindComplete += GoToNextDimension;
+        FindObjectOfType<RewinderManager>().changeDimention += GoToNextDimension;
     }
 
     public void GoToNextDimension() {

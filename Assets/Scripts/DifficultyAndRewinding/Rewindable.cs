@@ -8,10 +8,6 @@ public class Rewindable : MonoBehaviour {
     [SerializeField, Range(0.01f, 1f)] float fidelity = 0.5f;
     [SerializeField] float secondsToSave = 5f;
 
-    [Header("Testing, only temporary")]
-    [SerializeField] TrailRenderer recordingTrail = default;
-    [SerializeField] TrailRenderer playbackTrail = default;
-
     FixedStack<Vector2> velocities;
     new Rigidbody2D rigidbody;
 
@@ -24,20 +20,20 @@ public class Rewindable : MonoBehaviour {
     private class FixedStack<T> : LinkedList<T> {
         private int _maxSize;
         public FixedStack(int maxSize) {
-        _maxSize = maxSize;
+            _maxSize = maxSize;
         }
 
         public void Push(T item) {
-        this.AddFirst(item);
+            this.AddFirst(item);
 
-        if(this.Count > _maxSize)
-            this.RemoveLast();
+            if(this.Count > _maxSize)
+                this.RemoveLast();
         }
 
         public T Pop() {
-        var item = this.First.Value;
-        this.RemoveFirst();
-        return item;
+            var item = this.First.Value;
+            this.RemoveFirst();
+            return item;
         }
     }
 
@@ -47,11 +43,6 @@ public class Rewindable : MonoBehaviour {
         velocities = new FixedStack<Vector2>(Mathf.RoundToInt(secondsToSave / fidelity));
         rigidbody = GetComponent<Rigidbody2D>();
         InvokeRepeating("SaveVelocity", 0.00001f, fidelity);
-
-        // Temporary, used to debug, feel free to remove
-        recordingTrail.emitting = true;
-        playbackTrail.emitting = false;
-        // End of temporary
     }
 
     private void SaveVelocity() {
@@ -59,11 +50,6 @@ public class Rewindable : MonoBehaviour {
     }
 
     public void Rewind() {
-        // Temporary, used to debug, feel free to remove
-        recordingTrail.emitting = false;
-        playbackTrail.emitting = true;
-        // End of temporary
-
         rewinding = true;
         CancelInvoke("SaveVelocity");
         InvokeRepeating("PlaybackVelocities", 0.00001f, fidelity);
