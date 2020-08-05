@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractableText : MonoBehaviour
+public abstract class InteractableText : MonoBehaviour
 {
     public GameObject interactableText = default;
-    private void OnTriggerEnter2D(Collider2D other)
+    public virtual void OnTriggerEnter2D(Collider2D other)
     {
         if (other.TryGetComponent<PlayerInputHandler>(out PlayerInputHandler i))
         {
@@ -13,7 +13,7 @@ public class InteractableText : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    public virtual void OnTriggerExit2D(Collider2D other)
     {
         if (other.TryGetComponent<PlayerInputHandler>(out PlayerInputHandler i))
         {

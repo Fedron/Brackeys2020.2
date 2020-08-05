@@ -2,17 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickableWeapon : MonoBehaviour
+public class PickableWeapon : InteractableText
 {
     public GameObject weaponPref;
-    private void OnTriggerEnter2D(Collider2D collision)
+    Collider2D tempCollision;
+
+    private void Update()
     {
-        if (collision.transform.CompareTag("Player"))
+        if (interactableText.activeInHierarchy && Input.GetKeyDown(KeyCode.E))
         {
-            collision.BroadcastMessage("RemoveWeapon");
-            Instantiate(weaponPref, collision.transform.position, Quaternion.identity, collision.transform);
+            tempCollision.BroadcastMessage("RemoveWeapon");
+            Instantiate(weaponPref, tempCollision.transform.position, Quaternion.identity, tempCollision.transform);
             Destroy(gameObject);
         }
-        
+    }
+    public override void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.TryGetComponent<PlayerInputHandler>(out PlayerInputHandler i))
+        {
+            tempCollision = collision;
+            interactableText.SetActive(true);
+
+        }
+
     }
 }
