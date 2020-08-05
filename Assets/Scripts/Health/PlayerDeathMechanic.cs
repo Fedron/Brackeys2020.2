@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
 
 public class PlayerDeathMechanic : MonoBehaviour
 {
@@ -11,7 +10,6 @@ public class PlayerDeathMechanic : MonoBehaviour
     public GameObject deathVFXPref;
     public float TimeForRevive;
 
-    [SerializeField] TextMeshProUGUI healthText;
 
     private void Awake()
     {
@@ -33,15 +31,7 @@ public class PlayerDeathMechanic : MonoBehaviour
 
     //private void DeathParticles() => Instantiate(deathVFXPref, transform.position, Quaternion.identity);
     private void StopGameAndWaitUntilRevive() => StartCoroutine(StopEnemies());
-    private void ResetHealth() {
-        Debug.Log(pHealth.CurrentHealth);
-        pHealth.CurrentHealth = pHealth.MaxHealth;
-        Debug.Log(pHealth.CurrentHealth);
-    }
-
-    private void LateUpdate() {
-        healthText.text = pHealth.CurrentHealth.ToString();
-    }
+    private void ResetHealth() => pHealth.CurrentHealth = pHealth.MaxHealth;
 
     private IEnumerator StopEnemies()
     {

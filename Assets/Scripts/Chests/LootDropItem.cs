@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// Item that can be picked by a LootDropTable.
 /// </summary>
-public abstract class LootDropItem<T> : MonoBehaviour
+public abstract class LootDropItem<T> 
 {
     // Item it represents - usually GameObject, integer etc...
     public T item;

@@ -14,15 +14,6 @@ public class LootChest : MonoBehaviour
     // How many items treasure will spawn
     public int numItemsToDrop;
 
-    // Runs when we start our game
-    public void Start()
-    {
-
-        // Spawn objects in a straight line
-        DropLootNearChest(numItemsToDrop);
-
-    }
-
     void OnValidate()
     {
 
@@ -35,13 +26,15 @@ public class LootChest : MonoBehaviour
     /// Spawning objects in horizontal line
     /// </summary>
     /// <param name="numItemsToDrop"></param>
-    void DropLootNearChest(int numItemsToDrop)
+    public void DropLootNearChest()
     {
         for (int i = 0; i < numItemsToDrop; i++)
         {
             LootDropItemGameObject selectedItem = lootDropTable.PickLootDropItem();
-            GameObject selectedItemGameObject = Instantiate(selectedItem.item);
-            selectedItemGameObject.transform.position = new Vector2(i / 2f, 0f);
+            GameObject selectedItemGameObject = Instantiate(selectedItem.item, 
+                (Vector2)transform.position + new Vector2(Random.Range(-1, 4), Random.Range(-1, 4)), 
+                Quaternion.identity);
+
         }
     }
 }
