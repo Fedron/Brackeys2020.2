@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DungeonManager : MonoBehaviour {
     [SerializeField] bool debug = false;
-    [SerializeField] DungeonPreset[] dungeonPresets = default;
+    [SerializeField] public DungeonPreset[] dungeonPresets = default;
 
     [Header("Minimap Icons")]
     [SerializeField] GameObject startRoomMinimapIcon = default;
@@ -39,7 +39,7 @@ public class DungeonManager : MonoBehaviour {
     [HideInInspector] public GameObject closedRoom;
 #endregion
 
-    int previousPreset = 0;
+    public int previousPreset = 0;
 
     private void Awake() {
         activeRoom = 0;
@@ -47,8 +47,6 @@ public class DungeonManager : MonoBehaviour {
 
     private void LateUpdate() {
         if (roomContentGenerated) return;
-
-        //Debug.Log(GameObject.FindObjectsOfType<RoomSpawner>().Length);
 
         RoomSpawner[] spawners = GameObject.FindObjectsOfType<RoomSpawner>();
         if (spawners.Length > 0) return;

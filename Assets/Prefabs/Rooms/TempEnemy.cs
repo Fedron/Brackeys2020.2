@@ -10,12 +10,6 @@ public class TempEnemy : MonoBehaviour {
         ch.OnDie += Die;
     }
 
-    private void OnCollisionEnter2D(Collision2D other) {
-        if (other.gameObject.TryGetComponent<Bullet>(out Bullet bullet)) {
-            Die();
-        }
-    }
-
     private void Die() {
         Destroy(gameObject);
     }

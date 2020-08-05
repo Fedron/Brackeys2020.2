@@ -10,9 +10,10 @@ public class RoomManager : MonoBehaviour {
     public int EnemyCount {
         get { return enemies.Count; }
     }
-    List<GameObject> enemies = new List<GameObject>();
+    [HideInInspector] public List<GameObject> enemies = new List<GameObject>();
     [HideInInspector] public int roomID;
     [HideInInspector] public bool explored;
+    bool enemiesActivated = false;
 
     private void Awake() {
         dungeon = GameObject.FindGameObjectWithTag("DungeonManager").GetComponent<DungeonManager>();
@@ -28,6 +29,18 @@ public class RoomManager : MonoBehaviour {
         if (dungeon.activeRoom != roomID) return;
 
         if (EnemyCount > 0) {
+            if (AstarPath.active.data.gridGraph.center != transform.position) {
+                AstarPath.active.data.gridGraph.center = transform.position;
+                AstarPath.active.Scan(AstarPath.active.data.gridGraph);
+            }
+
+            if (!enemiesActivated) {
+                enemiesActivated = true;
+                foreach (GameObject enemy in enemies) {
+                    enemy.GetComponent<AIMoverandPathfinding>().enabled = true;
+                }
+            }
+
             List<GameObject> oldEnemies = enemies;
             for (int i = 0; i < oldEnemies.Count; i++) {
                 if (enemies[i] == null) enemies.Remove(oldEnemies[i]);
@@ -62,7 +75,7 @@ public class RoomManager : MonoBehaviour {
             } while (Physics2D.OverlapCircle(spawnPos, 0.75f) != null);
 
             GameObject enemy = Instantiate(
-                dungeon.enemies[Random.Range(0, dungeon.enemies.Length)],
+                dungeon.dungeonPresets[dungeon.previousPreset].enemies[Random.Range(0, dungeon.dungeonPresets[dungeon.previousPreset].enemies.Length)],
                 spawnPos, Quaternion.identity
             );
             enemies.Add(enemy);

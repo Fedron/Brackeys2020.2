@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerDeathMechanic : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class PlayerDeathMechanic : MonoBehaviour
     private RewinderManager rewinderManager;
     public GameObject deathVFXPref;
     public float TimeForRevive;
+
+    [SerializeField] TextMeshProUGUI healthText;
 
     private void Awake()
     {
@@ -30,12 +33,31 @@ public class PlayerDeathMechanic : MonoBehaviour
 
     //private void DeathParticles() => Instantiate(deathVFXPref, transform.position, Quaternion.identity);
     private void StopGameAndWaitUntilRevive() => StartCoroutine(StopEnemies());
-    private void ResetHealth() { pHealth.CurrentHealth = pHealth.MaxHealth; Debug.Log("Health is restored"); }
+    private void ResetHealth() {
+        Debug.Log(pHealth.CurrentHealth);
+        pHealth.CurrentHealth = pHealth.MaxHealth;
+        Debug.Log(pHealth.CurrentHealth);
+    }
+
+    private void LateUpdate() {
+        healthText.text = pHealth.CurrentHealth.ToString();
+    }
 
     private IEnumerator StopEnemies()
     {
         //todo make enemies be not aggressive while rewinding
-            yield return new WaitForSeconds(TimeForRevive);
-
+        DungeonManager dungeon = FindObjectOfType<DungeonManager>();
+        List<GameObject> enemies = dungeon.rooms[dungeon.activeRoom].GetComponent<RoomManager>().enemies;
+        foreach (GameObject enemy in enemies) {
+            try {
+                enemy.GetComponent<AIMoverandPathfinding>().enabled = false;
+            } catch {}
+        }
+        yield return new WaitForSeconds(TimeForRevive);
+        foreach (GameObject enemy in enemies) {
+            try {
+                enemy.GetComponent<AIMoverandPathfinding>().enabled = true;
+            } catch {}
+        }
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NextFloor : InteractibleText
+public class NextFloor : InteractableText
 {
 
     private void Update() {

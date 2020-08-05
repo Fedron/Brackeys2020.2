@@ -166,7 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAAQIewMTkaHUwIAAPsEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1z2jAQ/SuMzk0HgwNJby0hpId8TEgnF1820hprkCWPJAdIhv/elWxjh05PLG/f7r79kD+Z1K5C7o1dWSnujUD2Y8SCzb6Neucd7mFj9Fp+YMd5lcIXgQSR8wxeGsKTEOZMid5K/lNvVCCPCay1zI0tl2KDC+O8IzgH5ZBc1vgQrQn6HLE9/Vxch5ADWZN5sD7Iuh6PjmRy1B5tT+2IHa1h1ZorKCsUQXJPTsYdnaxI1NROywnSuVFKulYL84cq9rquCrQYmhUSqLVYP9ALlJvCB5nD2Mc8d+hbTRYON9LShJqk7JdpxlaC2zbC3kHVoczFJEnn6dV0ll5FaU3y+395SXTn1pR3Xf2mMV9Ivn2GAwfnB/MdwjdfG6j1DtQW3hS+FqgfzMqaWgtyeluH0Nrh5Kb/e2pxUSDf9ngj9Qysq/9vKfRwjFPYL5Qs34Lre9oAa2Xi2OMNoKUF/SbB8UJcm4LQoOKPwxfYDE+pddxK6zy52i51kPdmahuobBlnFrqp/cJYjRFuRVeoQfnDE6Xx56s88w3KnnluITyatnjr697CWUiEe/54fOZ6MrvTslxhdvfoisfaK6mxFx0cDzSnhdG6ubThTLqwdW1z4IOwTS3F19Nil6kY8wRgMr2ez2bz5AJgCpeX81nKJwmkc87i7UlNfYJ6aoS246Gt6T65pjvrviWjlYUqXr2wsFvJj9IMRi51btbcIurHJsNJOFoqQo9TLIWkAa3Re6njvtlnxpThWxTZKVEWO13uvYWsz5KxSr4bH5CMLeLHI2NHdvwLUEsDBBQAAAgIAAAQIexQ2EsJbQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM01VFQSi9KLMgoBooYgjilmSkgdrSSqUmKQbJhYqKRsaW5mZm5oW5ionGiqam5mUmykWGiiXmyUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAAAQIewMTkaHUwIAAPsEAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAAQIexQ2EsJbQAAAHgAAAAJACQAAAAAAAAAAAAAAKACAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAWAMAAAAA
+    dataString: UEsDBBQAAAgIAAAAIezXCuIRUgIAAPoEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1z2jAQ/SuMzqVjExI3vbWEkB7yMaGdXHzZSGusQZY8khwgGf57V7KNHTo9sbx9u/v2Q/5gUrsauTd2ZaW4NwLZ9wkLNvsyGZx3uIeN0Wv5jj3nRQpfBhJEzjN4aQhPQ5gzFXor+Q+9UYGcENhoWRhbLcUGF8Z5R3AByiG5rPEhWhP0MWF7+pleh5ADWbMsWO9kXSeTI5kctUc7UHtiT2tZjeYKqhpFkDyQ06SnkxWJmtrpOEE6N0pJ12lh/lDHXtd1iRZDs0ICtRbrB3qJclP6IHMc+1gUDn2nycLhRlqaUJuU/TTt2Cpw21bYG6gm1k+yi2yefpvNo7I29/0/tGka3YU11V1fvu3Ll5Jvn+HAwfnReMfwzWf9jd6B2sKrwpcS9YNZWdNoQU5vmxDaOJzdDH9PHS5K5NsBb6WegU39/yWFHo5xCPuFktVrcH2dt8BamTj1eAJoaT+/SHA8ENelIDSo+OPwN2zGl9Q5bqV1nlxdlzrIezWNDVS2jDML3TR+YazGCHeia9Sg/OGJ0vjzTZ75RmXPPLcQ3kxXvPP1T+EsJMIDP0nOXE9md1qWK83uHl352HglNQ6ig+OB5rQwWreHNp5JH7ZubAF8FLZppPh8WuxyLhKeAswurrOrqyydAlzA5WV2NeezFOYZZ/H2pKY+QT21Qrvx0Nb0kFzTnfWfksnKQh2PXljYreR7ZUYjl7owa24R9WOb4SQcLRWhtymWQtKA1ui91HHf7CNnyvAtivyUKI+dLvfeQj5kyVkt34wPSM4W8duRsyM7/gVQSwMEFAAACAgAAAAh7FDYSwltAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTVUVBKL0osyCgGihiCOKWZKSB2tJKpSYpBsmFiopGxpbmZmbmhbmKicaKpqbmZSbKRYaKJebJSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAAAh7NcK4hFSAgAA+gQAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAAAh7FDYSwltAAAAeAAAAAkAJAAAAAAAAAAAAAAAnwIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAABXAwAAAAA=
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -325,7 +325,7 @@ GameObject:
   - component: {fileID: 508119287}
   - component: {fileID: 508119288}
   - component: {fileID: 508119289}
-  m_Layer: 31
+  m_Layer: 30
   m_Name: wall
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -433,7 +433,7 @@ GameObject:
   - component: {fileID: 678178841}
   - component: {fileID: 678178843}
   - component: {fileID: 678178842}
-  m_Layer: 31
+  m_Layer: 30
   m_Name: Pillar
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -633,7 +633,7 @@ GameObject:
   - component: {fileID: 833237765}
   - component: {fileID: 833237767}
   - component: {fileID: 833237766}
-  m_Layer: 31
+  m_Layer: 30
   m_Name: wall (3)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -748,6 +748,7 @@ GameObject:
   - component: {fileID: 847885991}
   - component: {fileID: 847885990}
   - component: {fileID: 847885992}
+  - component: {fileID: 847885993}
   m_Layer: 8
   m_Name: Character
   m_TagString: Player
@@ -845,7 +846,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movespeed: 7
-  rewinder: {fileID: 0}
+  rewinder: {fileID: 847885993}
 --- !u!58 &847885987
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -910,7 +911,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathVFXPref: {fileID: 0}
-  TimeForRevive: 4
+  TimeForRevive: 2
 --- !u!114 &847885991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -942,6 +943,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &847885993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847885982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ede83bfd69623147a1e5bfe44d37c2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fidelity: 0.1
+  secondsToSave: 2
+  rewinding: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,7 +1133,7 @@ GameObject:
   - component: {fileID: 1220873234}
   - component: {fileID: 1220873236}
   - component: {fileID: 1220873235}
-  m_Layer: 31
+  m_Layer: 30
   m_Name: wall (4)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1557,7 +1573,7 @@ MonoBehaviour:
   maxRayCastRange: 10
   obsticlesMask:
     serializedVersion: 2
-    m_Bits: 2147483904
+    m_Bits: 1073742080
   isAgressive: 1
 --- !u!212 &1533337496
 SpriteRenderer:
@@ -1648,7 +1664,7 @@ GameObject:
   - component: {fileID: 1691552388}
   - component: {fileID: 1691552390}
   - component: {fileID: 1691552389}
-  m_Layer: 31
+  m_Layer: 30
   m_Name: wall (2)
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1853,7 +1869,7 @@ GameObject:
   - component: {fileID: 1953460015}
   - component: {fileID: 1953460017}
   - component: {fileID: 1953460016}
-  m_Layer: 31
+  m_Layer: 30
   m_Name: Pillar (1)
   m_TagString: Wall
   m_Icon: {fileID: 0}

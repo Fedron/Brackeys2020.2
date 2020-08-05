@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteractibleText : MonoBehaviour
+public class InteractableText : MonoBehaviour
 {
     public GameObject interactableText = default;
     private void OnTriggerEnter2D(Collider2D other)
