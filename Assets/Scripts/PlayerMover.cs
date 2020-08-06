@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMover : MonoBehaviour
 {
     private Rigidbody2D rigidbody2d;
+    public SpriteRenderer CharacterSpriteRenderer;
     public float movespeed = 6f;
     private Vector2 InputVector = Vector2.zero;
 
@@ -20,15 +21,13 @@ public class PlayerMover : MonoBehaviour
     }
     void Update()
     {
-        //rigidbody2d.MovePosition(rigidbody2d.position + InputVector * movespeed * Time.deltaTime);
-        //Vector2 direction = (InputVector).normalized;
-        //Vector2 force = direction * movespeed * Time.deltaTime;
 
-        //rigidbody2d.AddForce(force);
         try {
             if (rewinder.rewinding) return;
         } catch {}
-        
         rigidbody2d.velocity = InputVector * movespeed;
+        if (rigidbody2d.velocity.x < 0) CharacterSpriteRenderer.flipX = true;
+        else CharacterSpriteRenderer.flipX = false;
+
     }
 }

@@ -352,7 +352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableText: {fileID: 9147228041474236717}
-  weaponPref: {fileID: 2822314039472725732, guid: 8fb7373d0d096c84d9094cd19521b338,
+  weaponPref: {fileID: 9060092947859948478, guid: 8fb7373d0d096c84d9094cd19521b338,
     type: 3}
 --- !u!58 &9147228042044214867
 CircleCollider2D:

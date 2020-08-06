@@ -16,5 +16,5 @@ MonoBehaviour:
   damage: 20
   bulletPrefab: {fileID: 4844937914257232506, guid: 80f983f5df57c7440b2e6bd49ff5a39c,
     type: 3}
-  pickableWeaponPref: {fileID: 6770884407314495268, guid: 89cd7c6ec700ba34ebb60452fa743ee7,
+  pickableWeaponPref: {fileID: 3904257562398045151, guid: 89cd7c6ec700ba34ebb60452fa743ee7,
     type: 3}
