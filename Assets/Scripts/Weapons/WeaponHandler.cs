@@ -8,7 +8,7 @@ public class WeaponHandler : MonoBehaviour
     public WeaponStats weaponStats;
     [SerializeField] 
     private float fireRefreshRate, damage;
-    private GameObject bulletPref;
+    private GameObject bulletPref, pickableWeaponPref;
     private float nextFireTime = 0f;
     public int NumOfRicochets;
 
@@ -17,6 +17,7 @@ public class WeaponHandler : MonoBehaviour
         fireRefreshRate = weaponStats.coolDownRate;
         damage = weaponStats.damage;
         bulletPref = weaponStats.bulletPrefab;
+        pickableWeaponPref = weaponStats.pickableWeaponPref;
         weaponShootingBehavior = GetComponent<IShootingWeapon>();
     }
 
@@ -32,7 +33,12 @@ public class WeaponHandler : MonoBehaviour
     }
 
     // todo can make it drop a weapon instead of destroying it
-    public void RemoveWeapon() => Destroy(gameObject);
+    public void RemoveWeapon()
+    {
+        Instantiate(pickableWeaponPref, (Vector2)transform.position + new Vector2(Random.Range(-1, 2), Random.Range(-1, 2)),
+                Quaternion.identity);
+        Destroy(gameObject);
+    }
 
     // Adds a cooldown
     private bool CanFire()

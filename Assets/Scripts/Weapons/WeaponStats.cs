@@ -5,5 +5,5 @@ public class WeaponStats: ScriptableObject
 {
     public float coolDownRate;
     public float damage;
-    public GameObject bulletPrefab;
+    public GameObject bulletPrefab,pickableWeaponPref;
 }

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9536f8fa2bcda34db86af0786a5e726, type: 3}
-  m_Name: Pistol
+  m_Name: Minigun
   m_EditorClassIdentifier: 
-  coolDownRate: 0.5
-  damage: 10
-  bulletPrefab: {fileID: 4844937914257232506, guid: 51556f5dc10e19b4bb05ed5ecfa73d5b,
+  coolDownRate: 0.1
+  damage: 3
+  bulletPrefab: {fileID: 4844937914257232506, guid: cd33fd9b397470f4b9570d745098ac44,
     type: 3}
-  pickableWeaponPref: {fileID: 9147228042044214863, guid: a894588e6a3fdd644982bc6c64240884,
+  pickableWeaponPref: {fileID: 7099593796604649360, guid: 35c6a1e0702f3a240ac75b3e31750896,
     type: 3}
