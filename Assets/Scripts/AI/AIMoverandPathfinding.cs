@@ -17,7 +17,7 @@ public class AIMoverandPathfinding : MonoBehaviour
     private Seeker seeker;
     private Rigidbody2D rigidbody2d;
 
-    public int maxRayCastRange = 5;
+    public float maxRayCastRange = 5;
     public LayerMask obsticlesMask;
 
     //todo make em not shoot when they are rewinding
