@@ -6,12 +6,18 @@ public class Door : MonoBehaviour {
     [SerializeField] RoomManager room = default;
     [SerializeField] Animator animator = default;
 
+    [Space, SerializeField] SpriteRenderer left = default;
+    [SerializeField] SpriteRenderer right = default;
+
     DungeonManager dungeon;
 
     private void Awake() {
         dungeon = GameObject.FindGameObjectWithTag("DungeonManager").GetComponent<DungeonManager>();
         dungeon.openDoors += Open;
         dungeon.closeDoors += Close;
+
+        left.sprite = room.doorSprite;
+        right.sprite = room.doorSprite;
     }
 
     private void OnDisable() {

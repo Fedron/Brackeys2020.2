@@ -16,9 +16,6 @@ public class PlayerInputHandler : MonoBehaviour
     {
         if (rewinder != null && rewinder.rewinding) return;
 
-        // Used for testing, can be removed when player can die from enemy bullets
-        if (Input.GetKeyDown(KeyCode.F)) SendMessage("Die");
-
         var vertical = Input.GetAxis("Vertical");
         var horizontal = Input.GetAxis("Horizontal");
         playerMover.SetDirection(new Vector2(horizontal, vertical));

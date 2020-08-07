@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class RoomManager : MonoBehaviour {
     [SerializeField] GameObject minimapWalls = default;
+    [SerializeField] Sprite[] doorSprites = default;
+    [HideInInspector] public Sprite doorSprite = default;
 
     [SerializeField] public DungeonManager dungeon;
     int enemiesToSpawn;
@@ -16,6 +18,8 @@ public class RoomManager : MonoBehaviour {
     bool enemiesActivated = false;
 
     private void Awake() {
+        doorSprite = doorSprites[Random.Range(0, doorSprites.Length)];
+
         dungeon = GameObject.FindGameObjectWithTag("DungeonManager").GetComponent<DungeonManager>();
         if (!dungeon.rooms.Contains(gameObject)) dungeon.rooms.Add(gameObject);
 
@@ -23,6 +27,7 @@ public class RoomManager : MonoBehaviour {
         if (roomID == 0) ShowOnMinimap();
 
         dungeon.generateRoomContent += SpawnContent;
+        dungeon.destroyRooms += DestroyRoom;
     }
 
     private void LateUpdate() {
@@ -92,10 +97,14 @@ public class RoomManager : MonoBehaviour {
             Instantiate(dungeon.chestRoomMinimapIcon, transform.position, Quaternion.identity, transform);
     }
 
-    private void OnDestroy() {
+    public void DestroyRoom() {
         dungeon.generateRoomContent -= SpawnContent;
-        foreach (GameObject enemy in enemies) {
-            Destroy(enemy);
+        dungeon.destroyRooms -= DestroyRoom;
+
+        GameObject[] enemiesToDestroy = enemies.ToArray();
+        for (int i = 0; i < enemiesToDestroy.Length; i++) {
+            Destroy(enemiesToDestroy[i]);
         }
+        Destroy(gameObject);
     }
 }

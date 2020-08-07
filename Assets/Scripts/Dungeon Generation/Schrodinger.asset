@@ -17,17 +17,15 @@ MonoBehaviour:
   maxEnemies: 5
   enemies:
   - {fileID: 4268413774285064753, guid: 8d2674637650f324bac59b6cc0e7e945, type: 3}
-  - {fileID: 7445208607883925129, guid: 1d1c7921a7f192b48aff39b02f4ecf76, type: 3}
+  - {fileID: 4268413774285064753, guid: 5d2456d26d32e23458ad1fe3f2b24bd5, type: 3}
   topRooms:
   - {fileID: 8815349681416470350, guid: 7edd83c9efdabdd4da9a9edeb18053e1, type: 3}
   - {fileID: 579912162582221411, guid: 6be7cbf9e5ed8b4488853a03843a6409, type: 3}
   - {fileID: 6580411479134310047, guid: e168b7cdfdd1a2c4fb6f33a73e024fd1, type: 3}
-  - {fileID: 8897040452666499330, guid: 043616402009399418d870ee76b7355c, type: 3}
   rightRooms:
   - {fileID: 4199433297595108372, guid: cbf9febfe786547428bbf5cada9f114c, type: 3}
   - {fileID: 4097761440307290674, guid: e8a2b6b9ee4511043be03a64d52563d9, type: 3}
   - {fileID: 6018972722515511383, guid: 66efa80d9f4993f4d9f7856b4dd36dd8, type: 3}
-  - {fileID: 8897040452666499330, guid: 043616402009399418d870ee76b7355c, type: 3}
   bottomRooms:
   - {fileID: 8815349681416470350, guid: 71c5e454e00ba1e459f13e994e6b46f2, type: 3}
   - {fileID: 6018972722515511383, guid: 66efa80d9f4993f4d9f7856b4dd36dd8, type: 3}

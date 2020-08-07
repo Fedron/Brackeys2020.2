@@ -11,8 +11,6 @@ public class PlayerDeathMechanic : MonoBehaviour
     public GameObject deathVFXPref;
     public float TimeForRevive;
 
-    [SerializeField] TextMeshProUGUI healthText;
-
     private void Awake()
     {
         pHealth = GetComponent<CreaturesHealth>();
@@ -38,11 +36,7 @@ public class PlayerDeathMechanic : MonoBehaviour
         pHealth.CurrentHealth = pHealth.MaxHealth;
         Debug.Log(pHealth.CurrentHealth);
     }
-
-    private void LateUpdate() {
-        healthText.text = pHealth.CurrentHealth.ToString();
-    }
-
+    
     private IEnumerator StopEnemies()
     {
         //todo make enemies be not aggressive while rewinding

@@ -13,6 +13,10 @@ public class DungeonManager : MonoBehaviour {
 
     public GameObject nextFloorPrefab;
 
+    [Header("Schrodinger")]
+    [SerializeField] Color cameraBackground = default;
+    [SerializeField] GameObject backgroundFX = default;
+
     [HideInInspector] public List<GameObject> rooms = new List<GameObject>();
     [HideInInspector] public int activeRoom;
 
@@ -24,6 +28,8 @@ public class DungeonManager : MonoBehaviour {
     public OpenDoors openDoors;
     public delegate void CloseDoors();
     public CloseDoors closeDoors;
+    public delegate void DestroyRooms();
+    public DestroyRooms destroyRooms;
 
 #region Dungeon Preset
     [HideInInspector] public int roomSize;
@@ -39,7 +45,7 @@ public class DungeonManager : MonoBehaviour {
     [HideInInspector] public GameObject closedRoom;
 #endregion
 
-    public int previousPreset = 0;
+    [HideInInspector] public int previousPreset = 0;
 
     private void Awake() {
         activeRoom = 0;
@@ -70,24 +76,21 @@ public class DungeonManager : MonoBehaviour {
 
         if (debug) Debug.Log("------ Destroying old dungeon ------");
         if (rooms.Count > 0) {
-            foreach (GameObject room in rooms) {
-                Destroy(room);
+            destroyRooms?.Invoke();
+            GameObject[] icons = GameObject.FindGameObjectsWithTag("MinimapIcon");
+            for (int i = 0; i < icons.Length; i++) {
+                Destroy(icons[i].gameObject);
             }
-            for (int i = 0; i < transform.childCount; i++) {
-                Destroy(transform.GetChild(i).gameObject);
-            }
-        }     
+        }
 
         // Reset values
         if (debug) Debug.Log("Reseting values");
         rooms = new List<GameObject>();
         System.Delegate.RemoveAll(generateRoomContent, generateRoomContent);
+        System.Delegate.RemoveAll(destroyRooms, destroyRooms);
         roomContentGenerated = false;
         activeRoom = 0;
         FindObjectOfType<PlayerInputHandler>().transform.position = Vector3.zero;
-
-        // Add an animation for the dungeon falling and regenerating around the player
-        // Currently it just appears out of thin air
 
         if (preset != -1) preset = Mathf.Clamp(preset, 0, dungeonPresets.Length);
         else preset = previousPreset;
@@ -113,5 +116,11 @@ public class DungeonManager : MonoBehaviour {
         if (debug) Debug.Log("------ Starting Dungeon Generation ------");
         if (debug) Debug.Log("Instantiating rooms and generating layout");
         rooms.Add(Instantiate(startRoom, Vector3.zero, Quaternion.identity, transform));
+
+        // Schrodinger visuals
+        if (preset == 1) {
+            Camera.main.backgroundColor = cameraBackground;
+            backgroundFX.SetActive(true);
+        }   
     }
 }

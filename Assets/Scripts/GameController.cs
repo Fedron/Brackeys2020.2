@@ -6,12 +6,18 @@ using TMPro;
 public class GameController : MonoBehaviour {
     public static GameController Instance;
 
+    [HideInInspector] public bool paused = false;
+    [HideInInspector] public bool gameOver = false;
+
     [SerializeField] AnimationCurve difficultyCurve = default;
     [SerializeField] float maxDifficultyMultiplier = 3f;
     [SerializeField] int floorMaxDifficulty = 10;
 
-    [Header("UI, temporary")]
-    [SerializeField] TextMeshProUGUI floorText = default; // Eventually move to a UI Manager
+    [Header("UI")]
+    [SerializeField] TextMeshProUGUI floorText = default;
+    [SerializeField] GameObject gameUI = default;
+    [SerializeField] GameObject gameOverUI = default;
+    [SerializeField] GameObject pauseScreenUI = default;
 
     float difficultyMultiplier = 1f;
     public float Difficulty {
@@ -33,7 +39,29 @@ public class GameController : MonoBehaviour {
         dungeonManager = FindObjectOfType<DungeonManager>();
         GoToNextFloor(0);
 
-        FindObjectOfType<RewinderManager>().changeDimention += GoToNextDimension;
+        RewinderManager rm = FindObjectOfType<RewinderManager>();
+        rm.changeDimention += GoToNextDimension;
+        rm.gameOver += GameOver;
+    }
+
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.Escape)) TogglePause();
+    }
+
+    private void TogglePause() {
+        if (gameOver) return;
+
+        paused = !paused;
+        Time.timeScale = paused ? 0f : 1f;
+        pauseScreenUI.SetActive(paused);
+        gameUI.SetActive(!paused);
+    }
+
+    private void GameOver() {
+        gameOver = true;
+        Time.timeScale = 0f;
+        gameUI.SetActive(false);
+        gameOverUI.SetActive(true);
     }
 
     public void GoToNextDimension() {
