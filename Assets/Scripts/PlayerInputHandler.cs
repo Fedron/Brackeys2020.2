@@ -22,6 +22,6 @@ public class PlayerInputHandler : MonoBehaviour
         //BroadcastingMessage in order for mouse movements to be seen by any weapon
         BroadcastMessage("SetMouseDirection", Camera.main.ScreenToWorldPoint(Input.mousePosition));
         // BroadcastingMessage in order for any weapon to know that the shot was fired
-        if (Input.GetButtonDown("Fire1")) { BroadcastMessage("Fire"); }
+        if (Input.GetMouseButton(0)) { BroadcastMessage("Fire"); }
     }
 }
