@@ -114,6 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c76f6b89f4157ac44a0f31ed5e03baed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: {fileID: 8300000, guid: a5a524bcc21e6b643bd5b00e6a332233, type: 3}
   shootingFromTransform: {fileID: 9060092948352040279}
 --- !u!114 &9060092947859948464
 MonoBehaviour:

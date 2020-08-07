@@ -17,6 +17,8 @@ public class DungeonManager : MonoBehaviour {
     [Header("Schrodinger")]
     [SerializeField] Color cameraBackground = default;
     [SerializeField] GameObject backgroundFX = default;
+    [SerializeField] GameObject regularMapBorder = default;
+    [SerializeField] GameObject corruptedMapBorder = default;
 
     [HideInInspector] public List<GameObject> rooms = new List<GameObject>();
     [HideInInspector] public int activeRoom;
@@ -131,6 +133,8 @@ public class DungeonManager : MonoBehaviour {
         if (preset == 1) {
             Camera.main.backgroundColor = cameraBackground;
             backgroundFX.SetActive(true);
+            regularMapBorder.SetActive(true);
+            corruptedMapBorder.SetActive(true);
         }  
     }
 }

@@ -67,18 +67,23 @@ public class RoomManager : MonoBehaviour {
             Quaternion.Euler(0f, 0f, 90f * Random.Range(0, 4)),
             transform
         );
+        if (transform.GetChild(transform.childCount - 1).name.Contains("Chest"))
+            transform.GetChild(transform.childCount - 1).rotation = Quaternion.Euler(Vector3.zero);
 
         // Spawn Enemies
         for (int i = 0; i < enemiesToSpawn; i++) {
             Vector3 spawnPos;
+            int iters = 0;
             do {
+                iters++;
                 spawnPos = new Vector3(
                     transform.position.x + Random.Range(-dungeon.roomSize + 1, dungeon.roomSize - 1),
                     transform.position.y + Random.Range(-dungeon.roomSize + 1, dungeon.roomSize - 1),
                     0f
                 );
-            } while (Physics2D.OverlapCircle(spawnPos, 0.75f, LayerMask.NameToLayer("Ground")) != null);
-
+            } while (Physics2D.OverlapCircle(spawnPos, 0.75f, LayerMask.NameToLayer("Ground")) != null && iters < 3);
+            if (spawnPos == null) continue;
+            
             GameObject enemy = Instantiate(
                 dungeon.dungeonPresets[dungeon.previousPreset].enemies[Random.Range(0, dungeon.dungeonPresets[dungeon.previousPreset].enemies.Length)],
                 spawnPos, Quaternion.identity

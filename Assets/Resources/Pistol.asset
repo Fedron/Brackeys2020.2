@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coolDownRate: 0.5
   damage: 10
-  bulletPrefab: {fileID: 4844937914257232506, guid: 51556f5dc10e19b4bb05ed5ecfa73d5b,
+  bulletPrefab: {fileID: 4844937914257232506, guid: 80f983f5df57c7440b2e6bd49ff5a39c,
     type: 3}
   pickableWeaponPref: {fileID: 3904257562398045151, guid: f9c075ca8bb4bad4e8585ead35d89937,
     type: 3}

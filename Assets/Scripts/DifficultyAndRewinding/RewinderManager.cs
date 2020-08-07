@@ -17,15 +17,12 @@ public class RewinderManager : MonoBehaviour
     }
 
     public void DeathRewind() {
-        if (amountOfDeaths < reqAmountToChangeDifficulty) {
-            amountOfDeaths++;
-            //todo remove debug log
-            Debug.Log("Player did rewind successfully and counter of deaths now: " + amountOfDeaths);
+        amountOfDeaths++;
+        if (amountOfDeaths == 1) {
             normalRevive?.Invoke();
-        } else if (amountOfDeaths == reqAmountToChangeDifficulty) {
-            amountOfDeaths++;
+        } else if (amountOfDeaths == 3) {
             changeDimention?.Invoke();
-        } else {
+        } else if (amountOfDeaths == 4) {
             gameOver?.Invoke();
         }
     }
