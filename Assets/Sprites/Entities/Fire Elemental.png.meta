@@ -1,7 +1,391 @@
 fileFormatVersion: 2
 guid: cb82eedbfa15a67498c8ea3200fe5b00
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 3087402528269344191
+    second: Fire Elemental_0
+  - first:
+      213: 3806730809591520231
+    second: Fire Elemental_1
+  - first:
+      213: -3403481117237678855
+    second: Fire Elemental_2
+  - first:
+      213: -3110198528804980317
+    second: Fire Elemental_3
+  - first:
+      213: -6357567445339116766
+    second: Fire Elemental_4
+  - first:
+      213: -7248445571938248481
+    second: Fire Elemental_5
+  - first:
+      213: 2408119634867778541
+    second: Fire Elemental_6
+  - first:
+      213: -2038878939447101284
+    second: Fire Elemental_7
+  - first:
+      213: -5471714738105316204
+    second: Fire Elemental_8
+  - first:
+      213: -502443738395711018
+    second: Fire Elemental_9
+  - first:
+      213: -5770879258846604496
+    second: Fire Elemental_10
+  - first:
+      213: -1784253062478105843
+    second: Fire Elemental_11
+  - first:
+      213: 4234941643275878920
+    second: Fire Elemental_12
+  - first:
+      213: -6266506981249487285
+    second: Fire Elemental_13
+  - first:
+      213: -6673144307292341306
+    second: Fire Elemental_14
+  - first:
+      213: 1634961794746917421
+    second: Fire Elemental_15
+  - first:
+      213: 8273083189439940551
+    second: Fire Elemental_16
+  - first:
+      213: 2020494125988208444
+    second: Fire Elemental_17
+  - first:
+      213: -3254146873193400950
+    second: Fire Elemental_18
+  - first:
+      213: 5510157383635146284
+    second: Fire Elemental_19
+  - first:
+      213: 6434068957875929500
+    second: Fire Elemental_20
+  - first:
+      213: 805209900184087984
+    second: Fire Elemental_21
+  - first:
+      213: 5505185245816405039
+    second: Fire Elemental_22
+  - first:
+      213: 7573186802238465538
+    second: Fire Elemental_23
+  - first:
+      213: 6658180224973878204
+    second: Fire Elemental_24
+  - first:
+      213: 1791725866848825527
+    second: Fire Elemental_25
+  - first:
+      213: 6331029185564917228
+    second: Fire Elemental_26
+  - first:
+      213: -6039080607622213515
+    second: Fire Elemental_27
+  - first:
+      213: 5873306238373912415
+    second: Fire Elemental_28
+  - first:
+      213: -1608514609091481704
+    second: Fire Elemental_29
+  - first:
+      213: 2095997311146797514
+    second: Fire Elemental_30
+  - first:
+      213: -2988399622533532817
+    second: Fire Elemental_31
+  - first:
+      213: -4691263946165784989
+    second: Fire Elemental_32
+  - first:
+      213: -5014830130063543449
+    second: Fire Elemental_33
+  - first:
+      213: -4757955738156286114
+    second: Fire Elemental_34
+  - first:
+      213: -2843322482420422752
+    second: Fire Elemental_35
+  - first:
+      213: 1234053601253522060
+    second: Fire Elemental_36
+  - first:
+      213: -5609545709626886913
+    second: Fire Elemental_37
+  - first:
+      213: -7301844061037090144
+    second: Fire Elemental_38
+  - first:
+      213: 7249040589331925258
+    second: Fire Elemental_39
+  - first:
+      213: -1372187249960530622
+    second: Fire Elemental_40
+  - first:
+      213: 1581655186535403469
+    second: Fire Elemental_41
+  - first:
+      213: 2854825137575850688
+    second: Fire Elemental_42
+  - first:
+      213: 9188517707702970763
+    second: Fire Elemental_43
+  - first:
+      213: -2647867435024769579
+    second: Fire Elemental_44
+  - first:
+      213: -6460327572710640155
+    second: Fire Elemental_45
+  - first:
+      213: 2692549524132446916
+    second: Fire Elemental_46
+  - first:
+      213: -5799013003094306733
+    second: Fire Elemental_47
+  - first:
+      213: 896405577711069590
+    second: Fire Elemental_48
+  - first:
+      213: -7594859282448679143
+    second: Fire Elemental_49
+  - first:
+      213: -8093728020422572104
+    second: Fire Elemental_50
+  - first:
+      213: -7879425602792208378
+    second: Fire Elemental_51
+  - first:
+      213: -4731330831532136237
+    second: Fire Elemental_52
+  - first:
+      213: -5021510823577240454
+    second: Fire Elemental_53
+  - first:
+      213: 721565610925608471
+    second: Fire Elemental_54
+  - first:
+      213: 7359399429087491014
+    second: Fire Elemental_55
+  - first:
+      213: -1976166127368438001
+    second: Fire Elemental_56
+  - first:
+      213: 4830752468921948007
+    second: Fire Elemental_57
+  - first:
+      213: -8814096965810710055
+    second: Fire Elemental_58
+  - first:
+      213: -4347649457806763196
+    second: Fire Elemental_59
+  - first:
+      213: 5171122603452827350
+    second: Fire Elemental_60
+  - first:
+      213: 39506313562901940
+    second: Fire Elemental_61
+  - first:
+      213: 7829708899370922586
+    second: Fire Elemental_62
+  - first:
+      213: 8929546195145667086
+    second: Fire Elemental_63
+  - first:
+      213: -5987258463151018843
+    second: Fire Elemental_64
+  - first:
+      213: -1773026192444889413
+    second: Fire Elemental_65
+  - first:
+      213: -6788725957955330800
+    second: Fire Elemental_66
+  - first:
+      213: 566429755826036947
+    second: Fire Elemental_67
+  - first:
+      213: 7564104894887073862
+    second: Fire Elemental_68
+  - first:
+      213: -1091057434114176299
+    second: Fire Elemental_69
+  - first:
+      213: -1681687320659157524
+    second: Fire Elemental_70
+  - first:
+      213: 9165328353047002056
+    second: Fire Elemental_71
+  - first:
+      213: 6866042760333204269
+    second: Fire Elemental_72
+  - first:
+      213: -1604028693469877682
+    second: Fire Elemental_73
+  - first:
+      213: -2969707672412332804
+    second: Fire Elemental_74
+  - first:
+      213: 3892594298748163697
+    second: Fire Elemental_75
+  - first:
+      213: 3403085560577039866
+    second: Fire Elemental_76
+  - first:
+      213: 8280622826153958991
+    second: Fire Elemental_77
+  - first:
+      213: 3357276794194004790
+    second: Fire Elemental_78
+  - first:
+      213: 6938264309919273062
+    second: Fire Elemental_79
+  - first:
+      213: 5808937318229002714
+    second: Fire Elemental_80
+  - first:
+      213: 4139113512765075561
+    second: Fire Elemental_81
+  - first:
+      213: -5432814265596847063
+    second: Fire Elemental_82
+  - first:
+      213: -2473835255846577509
+    second: Fire Elemental_83
+  - first:
+      213: -5797622060163307175
+    second: Fire Elemental_84
+  - first:
+      213: -6718713960900685231
+    second: Fire Elemental_85
+  - first:
+      213: -7205121832525834934
+    second: Fire Elemental_86
+  - first:
+      213: 614618919533424696
+    second: Fire Elemental_87
+  - first:
+      213: 2070093119421751654
+    second: Fire Elemental_88
+  - first:
+      213: -351307705874965497
+    second: Fire Elemental_89
+  - first:
+      213: 3025618432252403675
+    second: Fire Elemental_90
+  - first:
+      213: -7394566752431871526
+    second: Fire Elemental_91
+  - first:
+      213: -8508464646001439308
+    second: Fire Elemental_92
+  - first:
+      213: 8754446824702194775
+    second: Fire Elemental_93
+  - first:
+      213: 6640520033344702495
+    second: Fire Elemental_94
+  - first:
+      213: 1180999481635786570
+    second: Fire Elemental_95
+  - first:
+      213: -8084125508153667296
+    second: Fire Elemental_96
+  - first:
+      213: -8624644510796970550
+    second: Fire Elemental_97
+  - first:
+      213: 6730293361953205493
+    second: Fire Elemental_98
+  - first:
+      213: -9119712890681922232
+    second: Fire Elemental_99
+  - first:
+      213: -1123140199788699559
+    second: Fire Elemental_100
+  - first:
+      213: -4874310784149541818
+    second: Fire Elemental_101
+  - first:
+      213: 361677225514820049
+    second: Fire Elemental_102
+  - first:
+      213: 5576365793094761231
+    second: Fire Elemental_103
+  - first:
+      213: -6844191874050644431
+    second: Fire Elemental_104
+  - first:
+      213: -995347085188985263
+    second: Fire Elemental_105
+  - first:
+      213: 451324488643411141
+    second: Fire Elemental_106
+  - first:
+      213: -2340865191013611536
+    second: Fire Elemental_107
+  - first:
+      213: 7460576574097670602
+    second: Fire Elemental_108
+  - first:
+      213: 7190127918919069919
+    second: Fire Elemental_109
+  - first:
+      213: -7554699260513558739
+    second: Fire Elemental_110
+  - first:
+      213: 6094896993058719332
+    second: Fire Elemental_111
+  - first:
+      213: -4953034495674753078
+    second: Fire Elemental_112
+  - first:
+      213: -4775565490456533495
+    second: Fire Elemental_113
+  - first:
+      213: 2002250631114445543
+    second: Fire Elemental_114
+  - first:
+      213: 2311190276951617655
+    second: Fire Elemental_115
+  - first:
+      213: 314566444679140094
+    second: Fire Elemental_116
+  - first:
+      213: -2856346535568552711
+    second: Fire Elemental_117
+  - first:
+      213: -474256231838355331
+    second: Fire Elemental_118
+  - first:
+      213: -7710508583899216404
+    second: Fire Elemental_119
+  - first:
+      213: 5036454345942760262
+    second: Fire Elemental_120
+  - first:
+      213: 7997917113174557520
+    second: Fire Elemental_121
+  - first:
+      213: 8494670745333324867
+    second: Fire Elemental_122
+  - first:
+      213: 3245306626583125137
+    second: Fire Elemental_123
+  - first:
+      213: -620610673299612421
+    second: Fire Elemental_124
+  - first:
+      213: -3818701919967114133
+    second: Fire Elemental_125
+  - first:
+      213: -6877757071875715491
+    second: Fire Elemental_126
+  - first:
+      213: -5816172924633939285
+    second: Fire Elemental_127
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,7 +424,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -71,9 +455,339 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Fire Elemental_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbd1320ed38a8da20800000000000000
+      internalID: 3087402528269344191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ebdc3d908934d430800000000000000
+      internalID: 3806730809591520231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fc6c4fc4f764c0d0800000000000000
+      internalID: -3403481117237678855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a9f2a5aaea56d4d0800000000000000
+      internalID: -3110198528804980317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22b69f0a71265c7a0800000000000000
+      internalID: -6357567445339116766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd81edef729586b90800000000000000
+      internalID: -7248445571938248481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de3ffe49c0c5b6120800000000000000
+      internalID: 2408119634867778541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c98fa32386274b3e0800000000000000
+      internalID: -2038878939447101284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental_8
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49c86f2af609014b0800000000000000
+      internalID: -5471714738105316204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental_9
+      rect:
+        serializedVersion: 2
+        x: 2304
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d9ed4df416f609f0800000000000000
+      internalID: -502443738395711018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental_10
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03357c6b3e7b9efa0800000000000000
+      internalID: -5770879258846604496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental_11
+      rect:
+        serializedVersion: 2
+        x: 2816
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d03f6950b4f0d37e0800000000000000
+      internalID: -1784253062478105843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental_12
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 802c7f3acf885ca30800000000000000
+      internalID: 4234941643275878920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Fire Elemental_13
+      rect:
+        serializedVersion: 2
+        x: 3328
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4e6e181a15e809a0800000000000000
+      internalID: -6266506981249487285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
