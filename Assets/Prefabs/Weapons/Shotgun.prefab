@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aff6a4b03496a840a777fbe9d84919b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sound: {fileID: 8300000, guid: 88e164b4a2c5205449a5fe6f804dbfd8, type: 3}
+  sound: {fileID: 8300000, guid: d743794bf9256c54a82f2b995882b700, type: 3}
   shootingFromTransform:
   - {fileID: 6578221747888882484}
   - {fileID: 6943149508673910763}
