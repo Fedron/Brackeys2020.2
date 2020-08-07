@@ -5,14 +5,11 @@ using UnityEngine;
 public class InteractibleChests : InteractableText
 {
     LootChest lootchest;
-    SpriteRenderer spriteRenderer;
     bool opened = false;
-    public Sprite openedChestSprite;
 
     private void Awake()
     {
         lootchest = GetComponent<LootChest>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
     }
     private void Update()
     {
@@ -21,7 +18,7 @@ public class InteractibleChests : InteractableText
             lootchest.DropLootNearChest();
             opened = true;
             //todo swap sprite image to a opened chest
-            spriteRenderer.sprite = openedChestSprite;
+            GetComponent<Animator>().SetTrigger("Open");
             interactableText.SetActive(false);
             // Removes this script from the chest
             Destroy(this);

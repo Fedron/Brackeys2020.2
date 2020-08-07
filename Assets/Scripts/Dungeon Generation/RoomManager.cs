@@ -62,7 +62,7 @@ public class RoomManager : MonoBehaviour {
 
         // Spawn Inners
         Instantiate(
-            dungeon.roomInners[Random.Range(0, dungeon.roomInners.Length)],
+            dungeon.dungeonPresets[dungeon.previousPreset].roomInners[Random.Range(0, dungeon.dungeonPresets[dungeon.previousPreset].roomInners.Length)],
             transform.position,
             Quaternion.Euler(0f, 0f, 90f * Random.Range(0, 4)),
             transform
@@ -77,7 +77,7 @@ public class RoomManager : MonoBehaviour {
                     transform.position.y + Random.Range(-dungeon.roomSize + 1, dungeon.roomSize - 1),
                     0f
                 );
-            } while (Physics2D.OverlapCircle(spawnPos, 0.75f) != null);
+            } while (Physics2D.OverlapCircle(spawnPos, 0.75f, LayerMask.NameToLayer("Ground")) != null);
 
             GameObject enemy = Instantiate(
                 dungeon.dungeonPresets[dungeon.previousPreset].enemies[Random.Range(0, dungeon.dungeonPresets[dungeon.previousPreset].enemies.Length)],

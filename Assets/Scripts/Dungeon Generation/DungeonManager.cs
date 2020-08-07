@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,8 +22,9 @@ public class DungeonManager : MonoBehaviour {
     [HideInInspector] public int activeRoom;
 
     [HideInInspector] public bool roomContentGenerated = false;
-    public delegate void GenerateRoomContent();
-    public GenerateRoomContent generateRoomContent;
+    // public delegate void GenerateRoomContent();
+    // public GenerateRoomContent generateRoomContent;
+    public event Action generateRoomContent = delegate { };
 
     public delegate void OpenDoors();
     public OpenDoors openDoors;
@@ -46,6 +48,8 @@ public class DungeonManager : MonoBehaviour {
 #endregion
 
     [HideInInspector] public int previousPreset = 0;
+    int preset = 0;
+    [Space, SerializeField] Animator animator = default;
 
     private void Awake() {
         activeRoom = 0;
@@ -59,21 +63,27 @@ public class DungeonManager : MonoBehaviour {
         roomContentGenerated = true;
 
         if (debug) Debug.Log("Layout complete, spawning minimap icons");
-        Instantiate(startRoomMinimapIcon, rooms[0].transform.position, Quaternion.identity, transform);
-        Instantiate(endRoomMinimapIcon, rooms[rooms.Count - 1].transform.position, Quaternion.identity, transform);
-        Instantiate(nextFloorPrefab, rooms[rooms.Count - 1].transform.position, Quaternion.identity, transform);
+        try {
+            Instantiate(startRoomMinimapIcon, rooms[0].transform.position, Quaternion.identity, transform);
+            Instantiate(endRoomMinimapIcon, rooms[rooms.Count - 1].transform.position, Quaternion.identity, transform);
+            Instantiate(nextFloorPrefab, rooms[rooms.Count - 1].transform.position, Quaternion.identity, transform);
+        } catch {}        
 
         if (debug) Debug.Log("------ Generating room content ------");
         generateRoomContent?.Invoke();
-        if (debug) Debug.Log("------ Generation complete, opening doors ------");
-        openDoors?.Invoke();
     }
 
-    public void GenerateDungeon(int preset = -1) {
+    public void GenerateDungeon(int pr = -1) {
         // Prevent regeneration if current dungeon is still generating
         RoomSpawner[] spawners = GameObject.FindObjectsOfType<RoomSpawner>();
         if (spawners.Length > 0) return;
 
+        preset = pr;
+        animator.SetTrigger("Regen");
+        Invoke("Generate", 0.6f);
+    }
+
+    private void Generate() {
         if (debug) Debug.Log("------ Destroying old dungeon ------");
         if (rooms.Count > 0) {
             destroyRooms?.Invoke();
@@ -121,6 +131,6 @@ public class DungeonManager : MonoBehaviour {
         if (preset == 1) {
             Camera.main.backgroundColor = cameraBackground;
             backgroundFX.SetActive(true);
-        }   
+        }  
     }
 }
