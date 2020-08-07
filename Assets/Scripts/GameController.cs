@@ -14,6 +14,12 @@ public class GameController : MonoBehaviour {
     [SerializeField] float maxDifficultyMultiplier = 3f;
     [SerializeField] int floorMaxDifficulty = 10;
 
+    [Header("SFX")]
+    [SerializeField] AudioClip dungeonTheme = default;
+    [SerializeField] AudioClip corruptedTheme = default;
+    [SerializeField] AudioClip stairsSound = default;
+    [SerializeField] AudioClip portalSound = default;
+
     [Header("UI")]
     [SerializeField] TextMeshProUGUI floorText = default;
     [SerializeField] TextMeshProUGUI gameOverFloorText = default;
@@ -41,6 +47,7 @@ public class GameController : MonoBehaviour {
         Difficulty = 1f;
         dungeonManager = FindObjectOfType<DungeonManager>();
         GoToNextFloor(0);
+        SoundManager.Instance.PlayMusic(dungeonTheme);
 
         RewinderManager rm = FindObjectOfType<RewinderManager>();
         rm.changeDimention += GoToNextDimension;
@@ -57,7 +64,6 @@ public class GameController : MonoBehaviour {
         paused = !paused;
         Time.timeScale = paused ? 0f : 1f;
         pauseScreenUI.SetActive(paused);
-        gameUI.SetActive(!paused);
     }
 
     private void GameOver() {
@@ -74,6 +80,8 @@ public class GameController : MonoBehaviour {
 
     public void GoToNextDimension() {
         GoToNextFloor(1);
+        SoundManager.Instance.PlayMusic(corruptedTheme);
+        SoundManager.Instance.Play(portalSound);
     }
 
     public void GoToNextFloor(int preset = -1) {
@@ -84,6 +92,7 @@ public class GameController : MonoBehaviour {
         float baseMultiplier = difficultyCurve.Evaluate(perc);
         difficultyMultiplier = (baseMultiplier * maxDifficultyMultiplier) + 1f;
 
+        if (Floor > 1) SoundManager.Instance.Play(stairsSound);
         dungeonManager.GenerateDungeon(preset);
     }
 }

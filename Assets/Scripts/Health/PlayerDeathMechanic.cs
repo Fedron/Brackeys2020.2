@@ -10,6 +10,8 @@ public class PlayerDeathMechanic : MonoBehaviour
     public GameObject deathVFXPref;
     public float TimeForRevive;
 
+    [SerializeField] AudioClip deathSound = default;
+
     private void Awake()
     {
         pHealth = GetComponent<CreaturesHealth>();
@@ -21,6 +23,7 @@ public class PlayerDeathMechanic : MonoBehaviour
         //pHealth.OnDie += DeathParticles;
         pHealth.OnDie += playerAnimation.DieAnimation;
         pHealth.OnDie += rewinderManager.DeathRewind;
+        pHealth.OnDie += DeathSound;
         //adds revive animation into the rewindermanager
         rewinderManager.normalRevive += playerAnimation.ReviveAnimation;
         rewinderManager.normalRevive += StopGameAndWaitUntilRevive;
@@ -32,6 +35,7 @@ public class PlayerDeathMechanic : MonoBehaviour
     //private void DeathParticles() => Instantiate(deathVFXPref, transform.position, Quaternion.identity);
     private void StopGameAndWaitUntilRevive() => StartCoroutine(StopEnemies());
     private void ResetHealth() => pHealth.CurrentHealth = pHealth.MaxHealth;
+    private void DeathSound() => SoundManager.Instance.Play(deathSound);
     
     private IEnumerator StopEnemies()
     {
