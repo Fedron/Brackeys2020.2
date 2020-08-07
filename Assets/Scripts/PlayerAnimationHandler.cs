@@ -16,21 +16,13 @@ public class PlayerAnimationHandler : MonoBehaviour
         if (rb2d.velocity.magnitude > 0.1) animator.SetBool("isWalking", true);
         else animator.SetBool("isWalking", false);
     }
-    public void WalkAnimation()
-    {
-        
-    }
     public void DieAnimation()
     {
-        //todo remove debug log
-        Debug.Log("Die animation is happening...");
-        //todo implement die animation
+        animator.SetBool("isDead", true);
     }
 
     public void ReviveAnimation()
     {
-        //todo remove debug log
-        Debug.Log("Revive animation is happening");
-        //todo implement revive animation
+        animator.SetBool("isDead", false);
     }
 }

@@ -31,8 +31,6 @@ public class WeaponHandler : MonoBehaviour
             weaponShootingBehavior.FireWeapon(bulletPref, damage, NumOfRicochets);
         }
     }
-
-    // todo can make it drop a weapon instead of destroying it
     public void RemoveWeapon()
     {
         Instantiate(pickableWeaponPref, (Vector2)transform.position + new Vector2(Random.Range(-1, 2), Random.Range(-1, 2)),

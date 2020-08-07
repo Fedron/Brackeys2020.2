@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 637987595906170167}
   - component: {fileID: 637987595906170169}
   - component: {fileID: 4062726219881203948}
+  - component: {fileID: 6852767042883948316}
   m_Layer: 11
   m_Name: RobotEnemyPistol
   m_TagString: Enemy
@@ -223,6 +224,21 @@ MonoBehaviour:
   fidelity: 0.5
   secondsToSave: 5
   rewinding: 0
+--- !u!114 &6852767042883948316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637987595906170162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27c0d96c63e36c244b738ba8a0e1c2b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DieVFXPref: {fileID: 5026997322740307348, guid: 11448382217995a449ee7a1f2ae2921e,
+    type: 3}
+  sound: {fileID: 8300000, guid: 9acf117792e19564d896cea5fd29685a, type: 3}
 --- !u!114 &3979861716967605933
 MonoBehaviour:
   m_ObjectHideFlags: 0

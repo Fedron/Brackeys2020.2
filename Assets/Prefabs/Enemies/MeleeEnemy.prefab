@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 9209130908612271548}
   - component: {fileID: 9209130908612271538}
   - component: {fileID: 9209130908612271536}
+  - component: {fileID: 4532499190168103443}
   m_Layer: 11
   m_Name: MeleeEnemy
   m_TagString: Enemy
@@ -220,6 +221,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88c5ff680149a5743802617846dcc38d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4532499190168103443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9209130908612271545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27c0d96c63e36c244b738ba8a0e1c2b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DieVFXPref: {fileID: 5026997322740307348, guid: 11448382217995a449ee7a1f2ae2921e,
+    type: 3}
+  sound: {fileID: 8300000, guid: 9acf117792e19564d896cea5fd29685a, type: 3}
 --- !u!1001 &5081609450002259828
 PrefabInstance:
   m_ObjectHideFlags: 0

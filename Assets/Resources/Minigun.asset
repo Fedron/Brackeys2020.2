@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Minigun
   m_EditorClassIdentifier: 
   coolDownRate: 0.1
-  damage: 3
+  damage: 5
   bulletPrefab: {fileID: 4844937914257232506, guid: cd33fd9b397470f4b9570d745098ac44,
     type: 3}
   pickableWeaponPref: {fileID: 3904257562398045151, guid: ae306b92de7ead04eb6cbf991e15799d,

@@ -356,17 +356,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootDropTable:
     lootDropItems:
-    - item: {fileID: 9147228042044214863, guid: a894588e6a3fdd644982bc6c64240884,
+    - item: {fileID: 3904257562398045151, guid: f9c075ca8bb4bad4e8585ead35d89937,
         type: 3}
-      probabilityWeight: 60
-      probabilityPercent: 60
+      probabilityWeight: 30
+      probabilityPercent: 30
       probabilityRangeFrom: 0
-      probabilityRangeTo: 60
+      probabilityRangeTo: 30
     - item: {fileID: 3904257562398045151, guid: 89cd7c6ec700ba34ebb60452fa743ee7,
         type: 3}
-      probabilityWeight: 40
-      probabilityPercent: 40
+      probabilityWeight: 10
+      probabilityPercent: 10
+      probabilityRangeFrom: 30
+      probabilityRangeTo: 40
+    - item: {fileID: 3904257562398045151, guid: ae306b92de7ead04eb6cbf991e15799d,
+        type: 3}
+      probabilityWeight: 10
+      probabilityPercent: 10
+      probabilityRangeFrom: 40
+      probabilityRangeTo: 50
+    - item: {fileID: 3904257562398045151, guid: 87dd4ea90b83ffc419d29cb366dc59b1,
+        type: 3}
+      probabilityWeight: 10
+      probabilityPercent: 10
+      probabilityRangeFrom: 50
+      probabilityRangeTo: 60
+    - item: {fileID: 3904257562398045151, guid: 0e6df39430df53a49aec067f9e6c012c,
+        type: 3}
+      probabilityWeight: 10
+      probabilityPercent: 10
       probabilityRangeFrom: 60
+      probabilityRangeTo: 70
+    - item: {fileID: 3904257562398045151, guid: 4847df4a9b490d94094deb89c85b8d92,
+        type: 3}
+      probabilityWeight: 30
+      probabilityPercent: 30
+      probabilityRangeFrom: 70
       probabilityRangeTo: 100
   numItemsToDrop: 1
 --- !u!114 &9219226611616360633

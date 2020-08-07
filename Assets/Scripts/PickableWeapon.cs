@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PickableWeapon : InteractableText
 {
+    [SerializeField] AudioClip sound = default;
     public GameObject weaponPref;
     Collider2D tempCollision;
 
@@ -13,6 +14,7 @@ public class PickableWeapon : InteractableText
         {
             tempCollision.BroadcastMessage("RemoveWeapon");
             Instantiate(weaponPref, tempCollision.transform.position, Quaternion.identity, tempCollision.transform);
+            SoundManager.Instance.Play(sound, true);
             Destroy(gameObject);
         }
     }
@@ -22,7 +24,6 @@ public class PickableWeapon : InteractableText
         {
             tempCollision = collision;
             interactableText.SetActive(true);
-
         }
 
     }
