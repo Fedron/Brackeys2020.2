@@ -32,6 +32,7 @@ public class CreaturesHealth : MonoBehaviour, IHaveHealth
     public void GetDamage(float dmg)
     {
         CurrentHealth -= dmg;
+        FindObjectOfType<GameController>().UpdateHealthbar(CurrentHealth, MaxHealth);
 
     }
     public void Heal(float amount)

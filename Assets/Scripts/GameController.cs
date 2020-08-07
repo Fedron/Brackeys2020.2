@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class GameController : MonoBehaviour {
@@ -15,6 +16,8 @@ public class GameController : MonoBehaviour {
 
     [Header("UI")]
     [SerializeField] TextMeshProUGUI floorText = default;
+    [SerializeField] TextMeshProUGUI gameOverFloorText = default;
+    [SerializeField] Image healthbar = default;
     [SerializeField] GameObject gameUI = default;
     [SerializeField] GameObject gameOverUI = default;
     [SerializeField] GameObject pauseScreenUI = default;
@@ -60,8 +63,13 @@ public class GameController : MonoBehaviour {
     private void GameOver() {
         gameOver = true;
         Time.timeScale = 0f;
+        gameOverFloorText.text = string.Concat("You reached floor ", floorText.text.Split(null)[1]);
         gameUI.SetActive(false);
         gameOverUI.SetActive(true);
+    }
+
+    public void UpdateHealthbar(float cur, float max) {
+        healthbar.fillAmount = cur / max;
     }
 
     public void GoToNextDimension() {

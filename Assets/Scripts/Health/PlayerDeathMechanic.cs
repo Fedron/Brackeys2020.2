@@ -26,6 +26,7 @@ public class PlayerDeathMechanic : MonoBehaviour
         rewinderManager.normalRevive += StopGameAndWaitUntilRevive;
         rewinderManager.normalRevive += ResetHealth;
         rewinderManager.changeDimention += playerAnimation.ReviveAnimation;
+        rewinderManager.changeDimention += ResetHealth;
     }
 
     //private void DeathParticles() => Instantiate(deathVFXPref, transform.position, Quaternion.identity);
