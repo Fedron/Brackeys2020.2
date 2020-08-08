@@ -23,6 +23,9 @@ public class Bullet : MonoBehaviour
     private void Start()
     {
         rb2d.AddForce(transform.up * bulletSpeed, ForceMode2D.Impulse);
+        Vector2 direction = rb2d.velocity;
+        float rotateAmount = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0, 0, rotateAmount);
         Destroy(gameObject, existanceTime);
     }
 
