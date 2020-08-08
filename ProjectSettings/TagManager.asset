@@ -56,6 +56,9 @@ TagManager:
   - name: Stairs
     uniqueID: 2190867611
     locked: 0
+  - name: Bullets
+    uniqueID: 3152158985
+    locked: 0
   - name: Environmental Particles
     uniqueID: 2978581547
     locked: 0

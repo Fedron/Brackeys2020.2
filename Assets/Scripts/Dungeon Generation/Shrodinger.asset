@@ -20,6 +20,9 @@ MonoBehaviour:
   - {fileID: 6319227214558411123, guid: 5ff995b50d07d3345afe08480ee94564, type: 3}
   - {fileID: 8359084882982840136, guid: 7dd17f5a62d05c3478c661f9ca145732, type: 3}
   - {fileID: 7269291695562105705, guid: 14dd538e1dc6f144eaadeaa456c2090d, type: 3}
+  - {fileID: 9209130908612271545, guid: 4334bd6e9e5a81241b636eec6eaeaab7, type: 3}
+  - {fileID: 637987595906170162, guid: df5af47c4683a8e49b11b55de7e62bc8, type: 3}
+  - {fileID: 6844540665631968328, guid: bf4ff9c525ebc9b45bbf38de90951b4b, type: 3}
   topRooms:
   - {fileID: 8815349681416470350, guid: 5ea43e648a0733c45957475a226f9a0e, type: 3}
   - {fileID: 579912162582221411, guid: 5c2198aaa727b8d48871b613f87c4bda, type: 3}

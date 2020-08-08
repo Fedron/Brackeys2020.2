@@ -105,8 +105,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1142808311
+  m_SortingLayer: 3
   m_SortingOrder: 12
   m_Sprite: {fileID: 419155962441908928, guid: b34ad3c5c14aa6046bd5166df68fc946, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -190,7 +190,6 @@ MonoBehaviour:
   - {fileID: 4121160816585235076}
   - {fileID: 4027961248668994408}
   - {fileID: 8903600788738230956}
-  Explosionsound: {fileID: 0}
   LittleBulletsDamage: 10
   maxNumofRicochets: 0
   currentNumOfRicochets: 0

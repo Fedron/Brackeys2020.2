@@ -42,7 +42,9 @@ public class RoomManager : MonoBehaviour {
             if (!enemiesActivated) {
                 enemiesActivated = true;
                 foreach (GameObject enemy in enemies) {
-                    enemy.GetComponent<AIMoverandPathfinding>().enabled = true;
+                    try {
+                        enemy.GetComponent<AIMoverandPathfinding>().enabled = true;
+                    } catch {}                    
                 }
             }
 

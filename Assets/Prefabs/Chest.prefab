@@ -358,40 +358,40 @@ MonoBehaviour:
     lootDropItems:
     - item: {fileID: 3904257562398045151, guid: f9c075ca8bb4bad4e8585ead35d89937,
         type: 3}
-      probabilityWeight: 30
-      probabilityPercent: 30
+      probabilityWeight: 4
+      probabilityPercent: 6.6666665
       probabilityRangeFrom: 0
-      probabilityRangeTo: 30
+      probabilityRangeTo: 4
     - item: {fileID: 3904257562398045151, guid: 89cd7c6ec700ba34ebb60452fa743ee7,
         type: 3}
-      probabilityWeight: 10
-      probabilityPercent: 10
-      probabilityRangeFrom: 30
-      probabilityRangeTo: 40
+      probabilityWeight: 8
+      probabilityPercent: 13.333333
+      probabilityRangeFrom: 4
+      probabilityRangeTo: 12
     - item: {fileID: 3904257562398045151, guid: ae306b92de7ead04eb6cbf991e15799d,
         type: 3}
-      probabilityWeight: 10
-      probabilityPercent: 10
-      probabilityRangeFrom: 40
-      probabilityRangeTo: 50
+      probabilityWeight: 8
+      probabilityPercent: 13.333333
+      probabilityRangeFrom: 12
+      probabilityRangeTo: 20
     - item: {fileID: 3904257562398045151, guid: 87dd4ea90b83ffc419d29cb366dc59b1,
         type: 3}
       probabilityWeight: 10
-      probabilityPercent: 10
-      probabilityRangeFrom: 50
-      probabilityRangeTo: 60
+      probabilityPercent: 16.666666
+      probabilityRangeFrom: 20
+      probabilityRangeTo: 30
     - item: {fileID: 3904257562398045151, guid: 0e6df39430df53a49aec067f9e6c012c,
         type: 3}
-      probabilityWeight: 10
-      probabilityPercent: 10
-      probabilityRangeFrom: 60
-      probabilityRangeTo: 70
+      probabilityWeight: 5
+      probabilityPercent: 8.333333
+      probabilityRangeFrom: 30
+      probabilityRangeTo: 35
     - item: {fileID: 3904257562398045151, guid: 4847df4a9b490d94094deb89c85b8d92,
         type: 3}
-      probabilityWeight: 30
-      probabilityPercent: 30
-      probabilityRangeFrom: 70
-      probabilityRangeTo: 100
+      probabilityWeight: 25
+      probabilityPercent: 41.666668
+      probabilityRangeFrom: 35
+      probabilityRangeTo: 60
   numItemsToDrop: 1
 --- !u!114 &9219226611616360633
 MonoBehaviour:
