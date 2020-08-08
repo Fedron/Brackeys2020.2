@@ -1,7 +1,415 @@
 fileFormatVersion: 2
 guid: bb8c990281c4a1e4a8bd56a0ad13a0b3
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6571203387337616034
+    second: Corrupted Spider_0
+  - first:
+      213: 3504268652000728157
+    second: Corrupted Spider_1
+  - first:
+      213: 2604508702762908901
+    second: Corrupted Spider_2
+  - first:
+      213: 381653042509431714
+    second: Corrupted Spider_3
+  - first:
+      213: -8397579830949490504
+    second: Corrupted Spider_4
+  - first:
+      213: 2893965504197163971
+    second: Corrupted Spider_5
+  - first:
+      213: -3456021110769507110
+    second: Corrupted Spider_6
+  - first:
+      213: -2608770914943216224
+    second: Corrupted Spider_7
+  - first:
+      213: 6033327135986577210
+    second: Corrupted Spider_8
+  - first:
+      213: -2417464239364026060
+    second: Corrupted Spider_9
+  - first:
+      213: 1978245653112454308
+    second: Corrupted Spider_10
+  - first:
+      213: 6239550275811733177
+    second: Corrupted Spider_11
+  - first:
+      213: 4264900560432934953
+    second: Corrupted Spider_12
+  - first:
+      213: 7805163143978451663
+    second: Corrupted Spider_13
+  - first:
+      213: -6309874502962805039
+    second: Corrupted Spider_14
+  - first:
+      213: -5980844070909530384
+    second: Corrupted Spider_15
+  - first:
+      213: 1573546877354880886
+    second: Corrupted Spider_16
+  - first:
+      213: 6212514224922993033
+    second: Corrupted Spider_17
+  - first:
+      213: 6131446103775079099
+    second: Corrupted Spider_18
+  - first:
+      213: 9205244413498454266
+    second: Corrupted Spider_19
+  - first:
+      213: -1618497637549705007
+    second: Corrupted Spider_20
+  - first:
+      213: -434818707830605536
+    second: Corrupted Spider_21
+  - first:
+      213: 4463891501368163228
+    second: Corrupted Spider_22
+  - first:
+      213: 7544722641096535316
+    second: Corrupted Spider_23
+  - first:
+      213: 6131574286988330493
+    second: Corrupted Spider_24
+  - first:
+      213: 2524355726566032200
+    second: Corrupted Spider_25
+  - first:
+      213: -2906266442838687365
+    second: Corrupted Spider_26
+  - first:
+      213: 7651238910844662033
+    second: Corrupted Spider_27
+  - first:
+      213: 9097317241935598622
+    second: Corrupted Spider_28
+  - first:
+      213: 5455986163632613897
+    second: Corrupted Spider_29
+  - first:
+      213: -6609202840144245405
+    second: Corrupted Spider_30
+  - first:
+      213: -3321972809780353552
+    second: Corrupted Spider_31
+  - first:
+      213: -9068999151750456485
+    second: Corrupted Spider_32
+  - first:
+      213: 334817488255728347
+    second: Corrupted Spider_33
+  - first:
+      213: 263204778510602982
+    second: Corrupted Spider_34
+  - first:
+      213: 8322700396793628439
+    second: Corrupted Spider_35
+  - first:
+      213: -2008225205834243842
+    second: Corrupted Spider_36
+  - first:
+      213: 8249374606876821397
+    second: Corrupted Spider_37
+  - first:
+      213: 6472024844762983204
+    second: Corrupted Spider_38
+  - first:
+      213: 1519104998723433556
+    second: Corrupted Spider_39
+  - first:
+      213: -9173854902816213312
+    second: Corrupted Spider_40
+  - first:
+      213: 3349240917289771002
+    second: Corrupted Spider_41
+  - first:
+      213: -4742195006045356934
+    second: Corrupted Spider_42
+  - first:
+      213: 425512396879840729
+    second: Corrupted Spider_43
+  - first:
+      213: -3296727967716230783
+    second: Corrupted Spider_44
+  - first:
+      213: 9179748130312723556
+    second: Corrupted Spider_45
+  - first:
+      213: -3973158250041214555
+    second: Corrupted Spider_46
+  - first:
+      213: -740337632164864189
+    second: Corrupted Spider_47
+  - first:
+      213: -2206271871476365675
+    second: Corrupted Spider_48
+  - first:
+      213: 8679891215602010602
+    second: Corrupted Spider_49
+  - first:
+      213: -7168999705412301528
+    second: Corrupted Spider_50
+  - first:
+      213: -7498897106752082182
+    second: Corrupted Spider_51
+  - first:
+      213: -1435087925639656112
+    second: Corrupted Spider_52
+  - first:
+      213: 6515853058913291855
+    second: Corrupted Spider_53
+  - first:
+      213: 5697795589014409351
+    second: Corrupted Spider_54
+  - first:
+      213: -3693141378413409874
+    second: Corrupted Spider_55
+  - first:
+      213: 4898617007440176147
+    second: Corrupted Spider_56
+  - first:
+      213: -4896892655327441072
+    second: Corrupted Spider_57
+  - first:
+      213: -8689608721110776605
+    second: Corrupted Spider_58
+  - first:
+      213: 5268877711572913618
+    second: Corrupted Spider_59
+  - first:
+      213: 7797433337299400337
+    second: Corrupted Spider_60
+  - first:
+      213: -2051571544066701199
+    second: Corrupted Spider_61
+  - first:
+      213: 7973961026396665212
+    second: Corrupted Spider_62
+  - first:
+      213: 8311714327433165389
+    second: Corrupted Spider_63
+  - first:
+      213: -569188237412080970
+    second: Corrupted Spider_64
+  - first:
+      213: -339840185642702573
+    second: Corrupted Spider_65
+  - first:
+      213: -3748806375330252184
+    second: Corrupted Spider_66
+  - first:
+      213: 2473421906346763072
+    second: Corrupted Spider_67
+  - first:
+      213: 3075011053110013569
+    second: Corrupted Spider_68
+  - first:
+      213: 604976179689883514
+    second: Corrupted Spider_69
+  - first:
+      213: 2306726040418703023
+    second: Corrupted Spider_70
+  - first:
+      213: 4753247732115636413
+    second: Corrupted Spider_71
+  - first:
+      213: 7760721279847772449
+    second: Corrupted Spider_72
+  - first:
+      213: -1270471326726902021
+    second: Corrupted Spider_73
+  - first:
+      213: -3049413850373750531
+    second: Corrupted Spider_74
+  - first:
+      213: -928673673294545717
+    second: Corrupted Spider_75
+  - first:
+      213: 4661044061603759934
+    second: Corrupted Spider_76
+  - first:
+      213: 1955743648884566623
+    second: Corrupted Spider_77
+  - first:
+      213: 8881595429007874844
+    second: Corrupted Spider_78
+  - first:
+      213: -1530936878202834425
+    second: Corrupted Spider_79
+  - first:
+      213: 3909240051010783654
+    second: Corrupted Spider_80
+  - first:
+      213: 7695535771110913831
+    second: Corrupted Spider_81
+  - first:
+      213: -6688258162398850321
+    second: Corrupted Spider_82
+  - first:
+      213: -5315785660846566546
+    second: Corrupted Spider_83
+  - first:
+      213: 8162518779977533285
+    second: Corrupted Spider_84
+  - first:
+      213: 2309519299168034643
+    second: Corrupted Spider_85
+  - first:
+      213: 4452229790328274969
+    second: Corrupted Spider_86
+  - first:
+      213: 6521054518938055486
+    second: Corrupted Spider_87
+  - first:
+      213: 3078424611478061581
+    second: Corrupted Spider_88
+  - first:
+      213: -1113348482438491144
+    second: Corrupted Spider_89
+  - first:
+      213: -3424201240203799525
+    second: Corrupted Spider_90
+  - first:
+      213: -6041182359474460228
+    second: Corrupted Spider_91
+  - first:
+      213: -6565417712878220817
+    second: Corrupted Spider_92
+  - first:
+      213: -5659939995154273352
+    second: Corrupted Spider_93
+  - first:
+      213: 6619577744372462164
+    second: Corrupted Spider_94
+  - first:
+      213: 6796189488613198819
+    second: Corrupted Spider_95
+  - first:
+      213: -8081230928267515062
+    second: Corrupted Spider_96
+  - first:
+      213: 2485752923612985621
+    second: Corrupted Spider_97
+  - first:
+      213: -4061837664214662796
+    second: Corrupted Spider_98
+  - first:
+      213: -4776165933525141937
+    second: Corrupted Spider_99
+  - first:
+      213: 7345817752184979125
+    second: Corrupted Spider_100
+  - first:
+      213: 4165200677363216108
+    second: Corrupted Spider_101
+  - first:
+      213: 8164252683874264863
+    second: Corrupted Spider_102
+  - first:
+      213: 2478839432800553210
+    second: Corrupted Spider_103
+  - first:
+      213: 5894242314165887706
+    second: Corrupted Spider_104
+  - first:
+      213: 4275909948738782271
+    second: Corrupted Spider_105
+  - first:
+      213: -7066817724377551744
+    second: Corrupted Spider_106
+  - first:
+      213: -988293898522618921
+    second: Corrupted Spider_107
+  - first:
+      213: -6206350285444377157
+    second: Corrupted Spider_108
+  - first:
+      213: 7028227867404717032
+    second: Corrupted Spider_109
+  - first:
+      213: -6888570497931649115
+    second: Corrupted Spider_110
+  - first:
+      213: 579815712802552985
+    second: Corrupted Spider_111
+  - first:
+      213: -1721759055297644462
+    second: Corrupted Spider_112
+  - first:
+      213: -3827704320196803999
+    second: Corrupted Spider_113
+  - first:
+      213: 8214330677966966936
+    second: Corrupted Spider_114
+  - first:
+      213: -2507917682541708882
+    second: Corrupted Spider_115
+  - first:
+      213: 1274522241241821026
+    second: Corrupted Spider_116
+  - first:
+      213: 674457293673068267
+    second: Corrupted Spider_117
+  - first:
+      213: -1459888647664561570
+    second: Corrupted Spider_118
+  - first:
+      213: -3196712881244263574
+    second: Corrupted Spider_119
+  - first:
+      213: -8187056111722767282
+    second: Corrupted Spider_120
+  - first:
+      213: -3647445482687956682
+    second: Corrupted Spider_121
+  - first:
+      213: 5221048662448466373
+    second: Corrupted Spider_122
+  - first:
+      213: 7936696455830793496
+    second: Corrupted Spider_123
+  - first:
+      213: -1439268136667284592
+    second: Corrupted Spider_124
+  - first:
+      213: 6245923719025379173
+    second: Corrupted Spider_125
+  - first:
+      213: -7996394474797522053
+    second: Corrupted Spider_126
+  - first:
+      213: -929709450202017233
+    second: Corrupted Spider_127
+  - first:
+      213: -5897357222042478303
+    second: Corrupted Spider_128
+  - first:
+      213: -4357595729077717742
+    second: Corrupted Spider_129
+  - first:
+      213: -6806230076739114220
+    second: Corrupted Spider_130
+  - first:
+      213: 4116381150361951803
+    second: Corrupted Spider_131
+  - first:
+      213: -4225674852250389431
+    second: Corrupted Spider_132
+  - first:
+      213: -2272808516024787172
+    second: Corrupted Spider_133
+  - first:
+      213: -2857553401433498692
+    second: Corrupted Spider_134
+  - first:
+      213: 8263898919058885484
+    second: Corrupted Spider_135
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,7 +448,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -71,9 +479,318 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Corrupted Spider_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e55d5eeb5556ec4a0800000000000000
+      internalID: -6571203387337616034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrupted Spider_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d545a08c5c9a1a030800000000000000
+      internalID: 3504268652000728157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrupted Spider_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ecb89aadd2152420800000000000000
+      internalID: 2604508702762908901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrupted Spider_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a3c83a8b67eb4500800000000000000
+      internalID: 381653042509431714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrupted Spider_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b05543d2adc57b80800000000000000
+      internalID: -8397579830949490504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrupted Spider_5
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cbf7ed0b4e692820800000000000000
+      internalID: 2893965504197163971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrupted Spider_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad4255c4c1fb900d0800000000000000
+      internalID: -3456021110769507110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrupted Spider_7
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a5507abca8cbcbd0800000000000000
+      internalID: -2608770914943216224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrupted Spider_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3f6432701faab350800000000000000
+      internalID: 6033327135986577210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrupted Spider_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4315f732511737ed0800000000000000
+      internalID: -2417464239364026060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrupted Spider_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ac7a38b0f3247b10800000000000000
+      internalID: 1978245653112454308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrupted Spider_11
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bee2f3dae5579650800000000000000
+      internalID: 6239550275811733177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corrupted Spider_12
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92038fa9678ff2b30800000000000000
+      internalID: 4264900560432934953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

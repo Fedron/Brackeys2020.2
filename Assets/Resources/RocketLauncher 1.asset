@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9536f8fa2bcda34db86af0786a5e726, type: 3}
-  m_Name: RocketLauncher
+  m_Name: RocketLauncher 1
   m_EditorClassIdentifier: 
   coolDownRate: 2
   damage: 50

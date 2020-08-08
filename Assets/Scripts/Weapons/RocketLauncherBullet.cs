@@ -42,7 +42,6 @@ public class RocketLauncherBullet : MonoBehaviour
             if (collision.gameObject.CompareTag("Player"))
             {
                 if (collision.gameObject.GetComponent<Rewindable>().rewinding) return;
-
             }
             var health = collision.transform.GetComponent<IHaveHealth>();
             if (health != null)
