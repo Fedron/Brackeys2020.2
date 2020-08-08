@@ -16,8 +16,7 @@ MonoBehaviour:
   minEnemies: 2
   maxEnemies: 5
   enemies:
-  - {fileID: 4268413774285064753, guid: 8d2674637650f324bac59b6cc0e7e945, type: 3}
-  - {fileID: 4268413774285064753, guid: 5d2456d26d32e23458ad1fe3f2b24bd5, type: 3}
+  - {fileID: 2995817086128239410, guid: eccb4605742441a4ba521388105b87f9, type: 3}
   topRooms:
   - {fileID: 8815349681416470350, guid: 5ea43e648a0733c45957475a226f9a0e, type: 3}
   - {fileID: 579912162582221411, guid: 5c2198aaa727b8d48871b613f87c4bda, type: 3}

@@ -7,10 +7,15 @@ public class PlayerInputHandler : MonoBehaviour
     private PlayerMover playerMover;
     private Rewindable rewinder;
 
+    GameController gc;
+    CreaturesHealth ch;
+
     private void Awake()
     {
         playerMover = GetComponent<PlayerMover>();
         rewinder = GetComponent<Rewindable>();
+        gc = FindObjectOfType<GameController>();
+        ch = GetComponent<CreaturesHealth>();
     }
     private void Update()
     {
@@ -23,5 +28,7 @@ public class PlayerInputHandler : MonoBehaviour
         BroadcastMessage("SetMouseDirection", Camera.main.ScreenToWorldPoint(Input.mousePosition));
         // BroadcastingMessage in order for any weapon to know that the shot was fired
         if (Input.GetMouseButton(0)) { BroadcastMessage("Fire"); }
+
+        gc.UpdateHealthbar(ch.CurrentHealth, ch.MaxHealth);
     }
 }

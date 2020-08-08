@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PickableHealthKit : InteractableText
 {
-    [SerializeField] AudioClip sound = default;
     Collider2D tempCollision;
     public float HealAmount;
 
@@ -13,7 +12,6 @@ public class PickableHealthKit : InteractableText
         if (interactableText.activeInHierarchy && Input.GetKeyDown(KeyCode.E))
         {
             tempCollision.GetComponent<IHaveHealth>().Heal(HealAmount);
-            SoundManager.Instance.Play(sound, true);
             Destroy(gameObject);
         }
     }
@@ -23,7 +21,7 @@ public class PickableHealthKit : InteractableText
         {
             tempCollision = collision;
             interactableText.SetActive(true);
-
+            AudioManager.Instance.PlaySound2D("Heal_Powerup");
         }
 
     }

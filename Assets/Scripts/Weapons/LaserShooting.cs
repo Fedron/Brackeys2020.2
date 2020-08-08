@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class LaserShooting : MonoBehaviour, IShootingWeapon
 {
-    [SerializeField] AudioClip sound = default;
     public Transform shootingFromTransform;
     public float maxRayCastRange;
     public LayerMask enemiesMask;
@@ -21,7 +20,6 @@ public class LaserShooting : MonoBehaviour, IShootingWeapon
         {
             hit.collider.GetComponent<IHaveHealth>().GetDamage(dmg);
         }
-        SoundManager.Instance.Play(sound, true);
-
+        AudioManager.Instance.PlaySound2D("Laser_Shoot");
     }
 }

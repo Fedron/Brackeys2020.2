@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class RewinderManager : MonoBehaviour
 {
+    [SerializeField] GameObject rewindEffect = default;
     private IHaveHealth playerHealth;
     public event Action normalRevive = delegate { };
     public event Action changeDimention = delegate { };
@@ -19,8 +20,10 @@ public class RewinderManager : MonoBehaviour
     public void DeathRewind() {
         amountOfDeaths++;
         if (amountOfDeaths == 1) {
+            rewindEffect.SetActive(true);
             normalRevive?.Invoke();
         } else if (amountOfDeaths == 3) {
+            FindObjectOfType<PlayerInputHandler>().GetComponent<Rewindable>().rewinding = true;
             changeDimention?.Invoke();
         } else if (amountOfDeaths == 4) {
             gameOver?.Invoke();

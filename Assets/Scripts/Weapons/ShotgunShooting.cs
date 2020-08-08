@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ShotgunShooting : MonoBehaviour, IShootingWeapon
 {
-    [SerializeField] AudioClip sound = default;
     public Transform[] shootingFromTransform;
     public GameObject MuzzleParticlePref;
     public int NumOfRicochets { get; set; }
@@ -17,7 +16,7 @@ public class ShotgunShooting : MonoBehaviour, IShootingWeapon
             var bullet = Instantiate(bulletPref, spawnPoint.position, spawnPoint.rotation);
             bullet.GetComponent<Bullet>().Damage = dmg;
             bullet.GetComponent<Bullet>().maxNumofRicochets = numofricochets;
+            AudioManager.Instance.PlaySound2D("Shotgun");
         }
-        SoundManager.Instance.Play(sound, true);
     }
 }

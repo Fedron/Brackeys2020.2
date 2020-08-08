@@ -13,7 +13,6 @@ public class RocketLauncherBullet : MonoBehaviour
     private Rigidbody2D rb2d;
     public GameObject afterBulletsPref, blowupVFX;
     public Transform[] TransformBulletsSpawners;
-    [SerializeField] AudioClip Explosionsound = default;
     public float Damage { get; set; }
     public float LittleBulletsDamage;
     public int maxNumofRicochets, currentNumOfRicochets = 0;
@@ -49,7 +48,7 @@ public class RocketLauncherBullet : MonoBehaviour
             if (health != null)
             {
                 Instantiate(blowupVFX, transform.position, Quaternion.identity);
-                SoundManager.Instance.Play(Explosionsound, true);
+                AudioManager.Instance.PlaySound2D("RocketExplosion1");
                 health.GetDamage(Damage);
                 Destroy(gameObject);
             }
@@ -72,7 +71,7 @@ public class RocketLauncherBullet : MonoBehaviour
             var bullet = Instantiate(afterBulletsPref, spawnPoint.position, spawnPoint.rotation);
             bullet.GetComponent<Bullet>().Damage = LittleBulletsDamage;
         }
-        SoundManager.Instance.Play(Explosionsound, true);
+        AudioManager.Instance.PlaySound2D("RocketExplosion1");
     }
 
 }

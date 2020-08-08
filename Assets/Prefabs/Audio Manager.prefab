@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7498943785209552819
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7498943785209552821}
+  - component: {fileID: 7498943785209552822}
+  - component: {fileID: 7498943785209552820}
+  m_Layer: 0
+  m_Name: Audio Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7498943785209552821
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7498943785209552819}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7498943785209552822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7498943785209552819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f819651980fd2564bb0ef3d6d222ce10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7498943785209552820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7498943785209552819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d6925e5e8b627d4984cfbe3c4ed7eb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundGroups:
+  - groupID: BodyDropDeath
+    group:
+    - {fileID: 8300000, guid: 1fd0125c3fae07845b9fb63038951648, type: 3}
+  - groupID: Dimension_Change
+    group:
+    - {fileID: 8300000, guid: 1fd0125c3fae07845b9fb63038951648, type: 3}
+  - groupID: Fire_Elemental_Death
+    group:
+    - {fileID: 8300000, guid: 882cde8245a2d7f42b1d8126f5796afb, type: 3}
+  - groupID: Fire_ElementalShoot
+    group:
+    - {fileID: 8300000, guid: 2310c9137ca846b44b5ee72cb641b079, type: 3}
+  - groupID: Heal_Powerup
+    group:
+    - {fileID: 8300000, guid: 8f3c7a895f5917c42a2de20105ead978, type: 3}
+  - groupID: Laser_Droning
+    group:
+    - {fileID: 8300000, guid: 4ef9371e8a2011e4d9ee603ccfd89c18, type: 3}
+  - groupID: Pistol
+    group:
+    - {fileID: 8300000, guid: ddcad402f6b9b994bb5b21acb3dd9a1e, type: 3}
+    - {fileID: 8300000, guid: ca433dc5fe404fa4fa5d3e08034e9fc5, type: 3}
+  - groupID: Robot_Death
+    group:
+    - {fileID: 8300000, guid: 59c56a3d82a31d942849f88584f50559, type: 3}
+  - groupID: Robot_Spider_Death
+    group:
+    - {fileID: 8300000, guid: b107398d8cebee34ba5d6d3aa80555b6, type: 3}
+  - groupID: Rocket_Launcher_Launching
+    group:
+    - {fileID: 8300000, guid: 5730d78053e3a3749a3071e6be8b1773, type: 3}
+  - groupID: RocketExplosion1
+    group:
+    - {fileID: 8300000, guid: 4bd7ccc69dc289e449ecfa810e05a269, type: 3}
+  - groupID: Shotgun
+    group:
+    - {fileID: 8300000, guid: 584dfc1c2fd0dc14bb301586e4033b71, type: 3}
+  - groupID: Stairs
+    group:
+    - {fileID: 8300000, guid: 9f006dc44fcde6a4b806612d3fe0162d, type: 3}
+  - groupID: Laser_Shoot
+    group:
+    - {fileID: 8300000, guid: aa82aa3eb6afef640bb9fca655d01fd9, type: 3}

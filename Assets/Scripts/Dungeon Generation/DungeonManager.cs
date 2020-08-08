@@ -6,6 +6,7 @@ using UnityEngine;
 public class DungeonManager : MonoBehaviour {
     [SerializeField] bool debug = false;
     [SerializeField] public DungeonPreset[] dungeonPresets = default;
+    [SerializeField] GameObject transitionPortal = default;
 
     [Header("Minimap Icons")]
     [SerializeField] GameObject startRoomMinimapIcon = default;
@@ -15,7 +16,6 @@ public class DungeonManager : MonoBehaviour {
     public GameObject nextFloorPrefab;
 
     [Header("Schrodinger")]
-    [SerializeField] Color cameraBackground = default;
     [SerializeField] GameObject backgroundFX = default;
     [SerializeField] GameObject regularMapBorder = default;
     [SerializeField] GameObject corruptedMapBorder = default;
@@ -81,7 +81,11 @@ public class DungeonManager : MonoBehaviour {
         if (spawners.Length > 0) return;
 
         preset = pr;
-        animator.SetTrigger("Regen");
+        if (preset != -1) preset = Mathf.Clamp(preset, 0, dungeonPresets.Length);
+        else preset = previousPreset;
+
+        if (preset == 0) animator.SetTrigger("Regen");
+        else transitionPortal.SetActive(true);
         Invoke("Generate", 0.6f);
     }
 
@@ -103,9 +107,6 @@ public class DungeonManager : MonoBehaviour {
         roomContentGenerated = false;
         activeRoom = 0;
         FindObjectOfType<PlayerInputHandler>().transform.position = Vector3.zero;
-
-        if (preset != -1) preset = Mathf.Clamp(preset, 0, dungeonPresets.Length);
-        else preset = previousPreset;
 
         if (debug) Debug.Log(string.Concat("Setting preset values using preset ", preset));
 
@@ -131,10 +132,10 @@ public class DungeonManager : MonoBehaviour {
 
         // Schrodinger visuals
         if (preset == 1) {
-            Camera.main.backgroundColor = cameraBackground;
             backgroundFX.SetActive(true);
             regularMapBorder.SetActive(true);
             corruptedMapBorder.SetActive(true);
+            FindObjectOfType<PlayerInputHandler>().GetComponent<Rewindable>().rewinding = false;
         }  
     }
 }

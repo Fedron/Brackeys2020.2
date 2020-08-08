@@ -29,6 +29,6 @@ public class FireShooting : MonoBehaviour, IShootingWeapon
             bullet.GetComponent<Bullet>().Damage = dmg;
             bullet.GetComponent<Bullet>().maxNumofRicochets = numofricochets;
         }
-
+        AudioManager.Instance.PlaySound2D("Fire_ElementalShoot");
     }
 }

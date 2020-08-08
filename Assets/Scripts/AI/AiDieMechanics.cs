@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class AiDieMechanics : MonoBehaviour
 {
+    [SerializeField] string deathSound = default;
     public GameObject DieVFXPref;
-    [SerializeField] AudioClip sound = default;
     private CreaturesHealth pHealth;
     private void Awake()
     {
@@ -16,7 +16,8 @@ public class AiDieMechanics : MonoBehaviour
     void Die()
     {
         Instantiate(DieVFXPref, transform.position, Quaternion.identity);
-        SoundManager.Instance.Play(sound, true);
+        //SoundManager.Instance.Play(sound, true);
+        AudioManager.Instance.PlaySound2D(deathSound);
         Destroy(gameObject);
     }
 

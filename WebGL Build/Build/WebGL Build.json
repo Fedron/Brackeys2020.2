@@ -1,7 +1,7 @@
 {
 "companyName": "DefaultCompany",
-"productName": "Brackeys2020.2",
-"productVersion": "0.1",
+"productName": "Time Hero",
+"productVersion": "1.0",
 "dataUrl": "WebGL Build.data.unityweb",
 "wasmCodeUrl": "WebGL Build.wasm.code.unityweb",
 "wasmFrameworkUrl": "WebGL Build.wasm.framework.unityweb",

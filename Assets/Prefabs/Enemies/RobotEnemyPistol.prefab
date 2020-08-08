@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7927ed83a70bde246ba89b6f63a67df7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 100
+  _maxHealth: 20
   _currentHealth: 100
 --- !u!114 &637987595906170170
 MonoBehaviour:
@@ -236,9 +236,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27c0d96c63e36c244b738ba8a0e1c2b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathSound: Robot_Death
   DieVFXPref: {fileID: 5026997322740307348, guid: 11448382217995a449ee7a1f2ae2921e,
     type: 3}
-  sound: {fileID: 8300000, guid: 9acf117792e19564d896cea5fd29685a, type: 3}
 --- !u!114 &3979861716967605933
 MonoBehaviour:
   m_ObjectHideFlags: 0
