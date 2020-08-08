@@ -2643,7 +2643,7 @@ GameObject:
   - component: {fileID: 8255470175371713828}
   m_Layer: 30
   m_Name: Wallmap
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3327,7 +3327,7 @@ GameObject:
   - component: {fileID: 4196668394258076205}
   - component: {fileID: -7293863585205865625}
   m_Layer: 0
-  m_Name: TL
+  m_Name: Normal TL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

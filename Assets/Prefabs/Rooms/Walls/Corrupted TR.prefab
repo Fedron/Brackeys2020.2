@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5359668782555824276}
   m_Layer: 30
   m_Name: Wallmap
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -433,7 +433,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 4
-      m_TileSpriteIndex: 3
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -471,10 +471,10 @@ Tilemap:
     m_Data: {fileID: 21300000, guid: e4cb9de8b76e3f540a4c2af5e77db083, type: 3}
   - m_RefCount: 6
     m_Data: {fileID: 21300000, guid: 0b53562167efc2e4280be2f4569481ad, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 895c59e95b51de946a00e046df4fc96f, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 895c59e95b51de946a00e046df4fc96f, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: c6e0386eefb099f409c0de10011a9a3d, type: 3}
   - m_RefCount: 1
