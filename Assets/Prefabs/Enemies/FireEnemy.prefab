@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxHealth: 80
-  _currentHealth: 100
+  _currentHealth: 80
 --- !u!114 &2995817086128239418
 MonoBehaviour:
   m_ObjectHideFlags: 0

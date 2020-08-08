@@ -27,11 +27,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4378355261015299283}
+  - {fileID: 6841623772673933098}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &4842019584347159669
+--- !u!1001 &2378764077840226188
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -93,12 +93,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9219226611616360632, guid: 71b1ba1e3b316bc40a5c7aa540bdc770,
-        type: 3}
-      propertyPath: lootDropTable.lootDropItems.Array.data[0].item
-      value: 
-      objectReference: {fileID: 3904257562398045151, guid: ae306b92de7ead04eb6cbf991e15799d,
-        type: 3}
     - target: {fileID: 9219226611616360636, guid: 71b1ba1e3b316bc40a5c7aa540bdc770,
         type: 3}
       propertyPath: m_Name
@@ -106,9 +100,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71b1ba1e3b316bc40a5c7aa540bdc770, type: 3}
---- !u!4 &4378355261015299283 stripped
+--- !u!4 &6841623772673933098 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9219226611616360614, guid: 71b1ba1e3b316bc40a5c7aa540bdc770,
     type: 3}
-  m_PrefabInstance: {fileID: 4842019584347159669}
+  m_PrefabInstance: {fileID: 2378764077840226188}
   m_PrefabAsset: {fileID: 0}

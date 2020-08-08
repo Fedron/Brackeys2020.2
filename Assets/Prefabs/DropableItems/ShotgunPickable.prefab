@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 7097334050457819444}
   m_Layer: 0
   m_Name: ShotgunPickable
-  m_TagString: Untagged
+  m_TagString: MinimapIcon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -320,7 +320,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactableText: {fileID: 3904257561759046845}
-  sound: {fileID: 8300000, guid: a5a524bcc21e6b643bd5b00e6a332233, type: 3}
   weaponPref: {fileID: 6578221747459800541, guid: 9ead3bc1109438544ba115c1464ecbab,
     type: 3}
 --- !u!95 &7097334050457819444

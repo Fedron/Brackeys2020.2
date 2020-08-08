@@ -33,7 +33,7 @@ public class LootChest : MonoBehaviour
             LootDropItemGameObject selectedItem = lootDropTable.PickLootDropItem();
             GameObject selectedItemGameObject = Instantiate(selectedItem.item, 
                 (Vector2)transform.position + new Vector2(Random.Range(-1, 4), Random.Range(-1, 4)), 
-                Quaternion.identity);
+                Quaternion.identity, transform);
 
         }
     }

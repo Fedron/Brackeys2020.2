@@ -9,7 +9,7 @@ public class CameraMovement : MonoBehaviour {
     Transform player;
 
     private void Awake() {
-        player = FindObjectOfType<PlayerInputHandler>().transform;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     private void LateUpdate() {

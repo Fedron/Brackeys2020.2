@@ -22,10 +22,10 @@ public class RewinderManager : MonoBehaviour
         if (amountOfDeaths == 1) {
             rewindEffect.SetActive(true);
             normalRevive?.Invoke();
-        } else if (amountOfDeaths == 3) {
+        } else if (amountOfDeaths == 2) {
             FindObjectOfType<PlayerInputHandler>().GetComponent<Rewindable>().rewinding = true;
             changeDimention?.Invoke();
-        } else if (amountOfDeaths == 4) {
+        } else if (amountOfDeaths == 3) {
             gameOver?.Invoke();
         }
     }
