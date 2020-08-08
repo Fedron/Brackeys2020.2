@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6764121083113136803}
   m_Layer: 30
   m_Name: Wallmap
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,7 +46,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 3
-      m_TileSpriteIndex: 3
+      m_TileSpriteIndex: 4
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -473,10 +473,10 @@ Tilemap:
     m_Data: {fileID: 21300000, guid: 0b53562167efc2e4280be2f4569481ad, type: 3}
   - m_RefCount: 12
     m_Data: {fileID: 21300000, guid: e4cb9de8b76e3f540a4c2af5e77db083, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300000, guid: 7e928c093b3382c47b6148302e08a7a4, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300000, guid: 7e928c093b3382c47b6148302e08a7a4, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: afd8c53c25daa904ebe466e50fb71362, type: 3}
   - m_RefCount: 1
@@ -1500,7 +1500,7 @@ GameObject:
   - component: {fileID: 4864411462912786181}
   - component: {fileID: 580249049219384808}
   - component: {fileID: 6257171828218610792}
-  m_Layer: 30
+  m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}

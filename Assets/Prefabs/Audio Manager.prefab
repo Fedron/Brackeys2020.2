@@ -62,7 +62,7 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 1fd0125c3fae07845b9fb63038951648, type: 3}
   - groupID: Dimension_Change
     group:
-    - {fileID: 8300000, guid: 1fd0125c3fae07845b9fb63038951648, type: 3}
+    - {fileID: 8300000, guid: 98c2ad152aef23f46b17406e6885756d, type: 3}
   - groupID: Fire_Elemental_Death
     group:
     - {fileID: 8300000, guid: 882cde8245a2d7f42b1d8126f5796afb, type: 3}
